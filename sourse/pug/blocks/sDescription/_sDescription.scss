@@ -32,11 +32,11 @@
 		}
 	}
 	&__description{
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(lg){
 			padding-top: rem(83);
 		}
 		h2{
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				max-width: rem(413);
 				text-align: left;
 			}
@@ -44,7 +44,7 @@
 			padding-bottom: rem(35);
 		}
 		&-caption{
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				max-width: rem(530);
 				text-align: left;
 				padding-bottom: 0;
