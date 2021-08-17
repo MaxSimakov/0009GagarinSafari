@@ -2,8 +2,27 @@ mixin sDescription(data)
 	// start sDescription
 	+b.SECTION.sDescription.section#sDescription&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sDescription
-				
-			.row
+			.row.row-desc-1
+				.col-12.col-md-6
+					+e.description
+						h2 Что такое Кайт-сафари
+						+e.description-caption Кайт сафари это неделя, проведенная в&nbsp;открытом море, на&nbsp;комфортабельной яхте которая станет для участников кайт-сафари передвижным отелем классом люкс. Это неделя проведенная вместе&nbsp;с веселыми и&nbsp;жизнерадостными людьми, для которых&nbsp;океан стал частью жизни.
+				.col-12.col-md-6
+					+e.image
+						img(src='img/description-image.png')
+			.row.row-desc-2
+				mixin desc-item(i,t,c)
+					.col-12.col-sm-6.col-md-4
+						+e.icon-border
+							+e.IMG.icon-image(src=`img/svg/description-${i}.svg`)
+						+e.icon-title!=t
+						+e.icon-caption!=c
+				+desc-item(1,`люкс яхта`,`Незабываемое путешествие на&nbsp;передвижном 5-ти звездочном отеле в&nbsp;море`)
+				+desc-item(2,`Обучение для новичков<br />и&nbsp;продвинутых`,`IKO инструкторы которые помогут встать на&nbsp;доску как совсем начинающим так и&nbsp;научить крутым трюкам тех кто уже катается`)
+				+desc-item(3,`All inclusive`,`Роскошные каюты, 3-х разовое питание`)
+				+desc-item(4,`Кайтсерфинг в&nbsp;море`,`Постоянный ветер на&nbsp;флет-спотах в&nbsp;Красном море`)
+				+desc-item(5,`Снаряжение на&nbsp;любой вкус<br />и&nbsp;уровень`,`Лучшее оборудование под любой ветер`)
+				+desc-item(6,`Развлечения и&nbsp;досуг`,`Снорклинг, дайвинг, массаж, вечеринки на&nbsp;яхте. Отдых который вы&nbsp;запомните!`)
+			+e.background.d-none.d-xl-block
+				img(src="img/description-bg.png")
 	// end sDescription
