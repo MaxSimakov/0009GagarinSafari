@@ -3,7 +3,117 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+		position: relative;
+	img{
+		@include media-breakpoint-down(xxl){
+			max-width: 100%;
+		}
+	}
+	.img1{
+		@include media-breakpoint-down(lg){
+			order:1;
+		}
+	}
+	.img2{
+		@include media-breakpoint-up(lg){
+			padding-left: 0;
+		}
+		@include media-breakpoint-down(lg){
+			order:3;
+		}
+	}
+	.row{
+		@include media-breakpoint-up(lg){
+			--bs-gutter-y:60px;
+		}
+		--bs-gutter-y:40px;
+	}
+	h4{
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-bottom: 41px;
+		letter-spacing: 0.1em;
+		text-align: center;
+		@include media-breakpoint-up(xl){
+			padding-top: 60px;
+			text-align: left;
+		}
+	}
+	.h4-1{
+		@include media-breakpoint-up(lg){
+			padding-left: rem(50);
+		}
+		
+	}
+	ul{
+		li{
+			padding-bottom: rem(8);
+			@include media-breakpoint-up(lg){
+				max-width: rem(569);
+			}
+			&::marker{
+				color:$primary;
+			}
+		}
+	}
+	.ul-1{
+		@include media-breakpoint-up(lg){	
+			margin-left: rem(68);
+		}
+	}
+	.ul-2{
+		@include media-breakpoint-up(lg){
+			margin-left: rem(18);
+		}
+	}
+	.caption--1{
+		@include media-breakpoint-down(lg){
+			order:0;
+		}
+	}
+	.caption--2{
+		@include media-breakpoint-down(lg){
+			order:2;
+		}
+	}
+	&__bg1{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 76.04%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+		}
+		img{
+			position: relative;
+			max-width: rem(1190);
+		}
+	}
+	&__bg2{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 14.06%, #FFFFFF 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+		}
+		img{
+			position: relative;
+			max-width: rem(1190);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
