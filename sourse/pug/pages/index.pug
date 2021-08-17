@@ -1,9 +1,17 @@
 extends layout/main.pug
 
 
-include ../blocks/sContent/_sContent.pug
+include ../blocks/sDescription/_sDescription.pug
+include ../blocks/sSliderBlock/_sSliderBlock.pug
+include ../blocks/sTraining/_sTraining.pug
+include ../blocks/sInsructors/_sInsructors.pug
+include ../blocks/sProgram/_sProgram.pug
+include ../blocks/sEntertainment/_sEntertainment.pug
+include ../blocks/sTariffs/_sTariffs.pug
+include ../blocks/sHowItWas/_sHowItWas.pug
+include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sTEst00/_sTEst00.pug
+//- include ../blocks/sTEst00/_sTEst00.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -13,26 +21,21 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent 
-	a.link-modal-js(href="#modal-call") sadasdsa 
-	a.link-modal-js(href="#modal-call") sadasdsa 
-	.container
-		.row
-			.col-6
-				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam aliquid magnam nobis explicabo doloribus, deleniti necessitatibus fuga. Odit nisi at, vitae laboriosam, distinctio quos eos perferendis repellat commodi aut maxime.
-			.col-6
-				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam aliquid magnam nobis explicabo doloribus, deleniti necessitatibus fuga. Odit nisi at, vitae laboriosam, distinctio quos eos perferendis repellat commodi aut maxime.
-		
 	+mob-mnu()
-	+icon("telegram")
 	+header()
-	+top-nav()
-	
-	+topLine()
+		//- +topLine()
+		+top-nav()
 	+headerBlock()
-	+sForm()
+	+sDescription()
+	+sSliderBlock()
+	+sTraining()
+	+sInsructors()
+	+sProgram()
+	+sEntertainment()
+	+sTariffs()
+	+sHowItWas()
+	+sReviews()
+	//- +sForm()
 	+sContact()
 	+footer()
-      
-
-
 
