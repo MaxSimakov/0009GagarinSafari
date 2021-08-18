@@ -31,17 +31,23 @@
 		}
 		span{
 			@include media-breakpoint-up(sm){
-				margin-left: 1px;
+				margin-left: 6px;
+			}
+			@include media-breakpoint-down(sm){
+				padding-left: 6px;
 			}
 		}
 		.btn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 240px;
 			height: 70px;
 			@include media-breakpoint-up(sm){
 				height: 60px;
 			}
 			&-success{
-				margin-right: 6px;
+				margin-right: 4px;
 				@include media-breakpoint-down(md){
 					&:hover{
 						background-color: $success;
