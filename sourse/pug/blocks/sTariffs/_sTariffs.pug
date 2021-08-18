@@ -3,7 +3,40 @@ mixin sTariffs(data)
 	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sTariffs
-				
+				h2 Тарифы
 			.row
+				.col-12.col-lg-6
+					+e.desc
+						+e.H3.title базовый
+						+e.caption Ты&nbsp;уверенно катаешься на&nbsp;кайте и&nbsp;имеешь собственное снаряжение
+						+e.price &euro;&nbsp;1200
+						+e.UL.list
+							li Постоянный контроль на&nbsp;воде
+							li Трансфер и&nbsp;аэропорта/в аэропорт
+							li Проживание на&nbsp;яхте в&nbsp;каюте комфорт класса (7дней)
+							li Трехразовое питание, напитки, закуски 24&nbsp;часа в&nbsp;сутки
+							li WI-FI
+							li Фотосъемка питание, напитки и&nbsp;закуски 24&nbsp;часа в&nbsp;сутки
+							li Вейкборд/SUP/йога
+							li Спортивная страховка
+						+e.btn-wrap
+							+e.btn.btn.btn-danger Оставить заявку
+				.col-12.col-lg-6
+					+e.desc
+						+e.H3.title С обучением
+						+e.caption Ты&nbsp;не&nbsp;пробовал кайт ранее или дошел в&nbsp;обучении только до&nbsp;вставания на&nbsp;доску
+						+e.price &euro;&nbsp;1700
+						+e.UL.list
+							li Обучение кайтингу с&nbsp;нуля с&nbsp;профессиональным инструктором (время и&nbsp;количество занятий не&nbsp;ограничено)
+							li Предоставление полного комплекта снаряжение (гидрокостюм, трапеция, кайт, планка, доска)
+							li Постоянный контроль на&nbsp;воде
+							li Трансфер из&nbsp;аэропорта/в аэропорт
+							li Проживание на&nbsp;яхте в&nbsp;каюте комфорт класса (7&nbsp;дней)
+							li Трехразовое питание, напитки, и&nbsp;закуски 24&nbsp;часа в&nbsp;сутки
+							li WI-FI
+							li Фотосъемка + вечерний разбор ошибок с&nbsp;инструктором
+							li Вейкборд/SUP/йога
+							li Спортивная страховка
+						+e.btn-wrap
+							+e.btn.btn.btn-danger Оставить заявку
 	// end sTariffs

@@ -3,7 +3,54 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	background-color: $light;
+	&__desc{
+		background-color: #fff;
+		padding: rem(63);
+	}
+	&__title{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 52px;
+	}
+	&__caption{
+		padding-top: rem(19);
+		text-align: center;
+		line-height: 150%;
+	}
+	&__price{
+		padding-top: rem(15);
+		text-align: center;
+		color:$primary;
+		font-size: rem(48);
+		font-weight: 700;
+		text-transform: capitalize;
+	}
+	&__list{
+		padding-top: rem(13);
+		padding-left: rem(13);
+		@include media-breakpoint-up(lg){
+			height: rem(400);
+		}
+		li{
+			padding-left: rem(4);
+			padding-bottom: rem(8.5);
+			&::marker{
+				color:$primary;
+			}
+		}
+	}
+	&__btn-wrap{
+		padding-top: rem(22);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	&__btn{
+		width: rem(240);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
