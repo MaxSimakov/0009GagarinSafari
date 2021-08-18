@@ -2,20 +2,38 @@
 mixin modal() 
 	//  start modals
 	
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	+b.modal-win--call(id="modal-call" class=" " style="display: none" )
 		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			.p-5
-			+policy()
+			h4 Заказать звонок
+			+e.caption Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+			+input("Ваше имя",'text').name
+			+input("Ваш телефон",'tel').tel
+			+e.btn.btn.btn-danger Забронировать место
+			+e.agreement Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
 	// #modal-call
-	
+	+b.modal-win--instructor(id="modal-instructor-1" class=" " style="display: none" )
+		.row
+			.col-12.col-lg-6
+				+e.person
+					+e.IMG.photo(src="img/instructors-1.png")
+					+e.name Катя<br />корниенко
+					+e.job Инструктор IKO
+					+e.exp Инструкторский опыт с&nbsp;2010&nbsp;года.
+			.col-12.col-lg-6
+				+e.title Об инструкторе
+				+e.longtext Любит свою жизнь, людей, ветер и&nbsp;готова этим делиться. Говорит, что почти 7&nbsp;лет назад ее&nbsp;загипнотизировал ветер и&nbsp;подарил ощущение полета. C&nbsp;тех пор преподает кайтсерфинг и&nbsp;не&nbsp;может променять его на&nbsp;что-либо. Считает это делом своей жизни и&nbsp;лучшей альтернативой сноубордингу, которому раньше посвящала зимы до&nbsp;знакомства с&nbsp;ветром. Обожает кайтсерфинг за&nbsp;его разнообразие: сейчас по-настоящему влюблена в&nbsp;вейврайдинг и&nbsp;фристайл (как старой, так и&nbsp;новой школы). Считает, что покорение волн на&nbsp;кайте&nbsp;&mdash; это как новая жизнь. Из&nbsp;последних достижений&nbsp;&mdash; 1&nbsp;место среди девочек на&nbsp;Malibu Kite Wave Contest 2020&nbsp;в Муйне (Вьетнам) и&nbsp;на&nbsp;марафоне Wind Marathon Arabatska Strilka 2019, 4&nbsp;место на&nbsp;втором этапе Чемпионата Украины по&nbsp;кайтсерфингу 2017 и&nbsp;3&nbsp;место на&nbsp;первом этапе ЧУ&nbsp;2016&nbsp;в женском зачете. IKO Assistant Instructor.
+	// #modal-instructor-1
+	+b.modal-win--instructor(id="modal-instructor-2" class=" " style="display: none" )
+		.row
+			.col-12.col-lg-6
+				+e.person
+					+e.IMG.photo(src="img/instructors-2.png")
+					+e.name Александр<br />Щербатенко
+					+e.job Главный инструктор
+					+e.exp Инструкторский опыт с&nbsp;2010&nbsp;года.
+			.col-12.col-lg-6
+				+e.title Об инструкторе
+				+e.longtext Саша само добро, спокойствие и&nbsp;понимание. Вообще, дружелюбие&nbsp;&mdash; отличительная черта команды нашей кайт школы, и&nbsp;Саша, как и&nbsp;положено боссу, самый приветливый. Инструктор IKO.<br />Сашу очень любят дети, ведь с&nbsp;ними он&nbsp;сразу находит общий язык, скорее всего потому, что у&nbsp;него уж&nbsp;больно много братьев и&nbsp;сестер.<br />Как инструктор, Саша отличается выдающимся терпением, невозмутимостью и&nbsp;профессиональным подходом.<br />Саша катается и&nbsp;учит на&nbsp;кайте с&nbsp;2009&nbsp;года, но&nbsp;раньше увлекался лыжами и&nbsp;сноубордом, работал горнолыжным инструктором.<br />Саша &mdash;прорайдер Nobile kiteboarding Russia. Он&nbsp;часто выступает на&nbsp;всевозможных соревнованиях, занимая призовые места.<br />Опытный, спокойный, веселый и&nbsp;терпеливый. Специализируется на&nbsp;продвинутом уровне
+	// #modal-instructor-2
+
 	// end modals
