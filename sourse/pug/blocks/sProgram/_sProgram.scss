@@ -3,7 +3,74 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	.row{
+		position: relative;
+		@include media-breakpoint-down(lg){
+			// --bs-gutter-y:180px;
+		}
+		@include media-breakpoint-down(md){
+			// --bs-gutter-y:140px;
+		}
+	}
+	.icon{
+		width: 60px;
+		color:#D9DEE2;
+	}
+	.arr-col{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include media-breakpoint-up(sm){
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		.icon{
+			height: 60px;
+			transform: rotate(90deg);
+		}
+	}
+	.arr1{
+		width: 60px;
+		padding: 0;
+		top:11%;
+		left:22%;
+		position: absolute;
+		@include media-breakpoint-down(xxl){
+			left:21%;
+		}
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+	}
+	.arr2{
+		width: 60px;
+		padding: 0;
+		top:11%;
+		left:47%;
+		position: absolute;
+		@include media-breakpoint-down(xl){
+			left:46.5%;
+		}
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+	}
+	.arr3{
+		width: 60px;
+		padding: 0;
+		top:11%;
+		left:72%;
+		position: absolute;
+		@include media-breakpoint-down(xl){
+			left:71%;
+		}
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+	}
+	background-color: $light;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

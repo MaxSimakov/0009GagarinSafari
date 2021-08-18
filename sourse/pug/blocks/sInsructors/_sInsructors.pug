@@ -1,9 +1,20 @@
 mixin sInsructors(data)
 	// start sInsructors
 	+b.SECTION.sInsructors.section#sInsructors&attributes(attributes)
+		+e.IMG.bg(src="img/instructors-bg.png")
 		.container
-			+b.section-title.text-center
-				h2 sInsructors
-				
+			h2 Наши инструкторы
 			.row
+				.col-12.col-lg-6
+					+e.item
+						+e.IMG.item-photo(src="img/instructors-1.png")
+						+e.H4.item-title катя корниенко
+						+e.item-caption Любит свою жизнь, людей, ветер и&nbsp;готова этим делиться.&nbsp;Говорит, что почти 7&nbsp;лет назад&nbsp;ее загипнотизировал ветер и&nbsp;подарил ощущение полета.
+						+e.item-btn.btn.btn-danger Подробнее об инструкторе
+				.col-12.col-lg-6
+					+e.item
+						+e.IMG.item-photo(src="img/instructors-2.png")
+						+e.H4.item-title Александр щербатенко
+						+e.item-caption Саша само добро, спокойствие и&nbsp;понимание. Вообще,&nbsp;дружелюбие&nbsp;&mdash; отличительная черта команды нашей&nbsp;кайт школы, и&nbsp;Саша, как и&nbsp;положено боссу, самый&nbsp;приветливый. Инструктор IKO.
+						+e.item-btn.btn.btn-danger Подробнее об инструкторе
 	// end sInsructors
