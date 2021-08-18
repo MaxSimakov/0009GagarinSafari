@@ -1,9 +1,32 @@
 mixin sSliderBlock(data)
 	// start sSliderBlock
 	+b.SECTION.sSliderBlock.section#sSliderBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sSliderBlock
-				
+		.container-fluid
 			.row
+				.col-12.col-lg-6.col-slider
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								img(src="img/slider-block.png")
+							.swiper-slide
+								img(src="img/slider-block.png")
+							.swiper-slide
+								img(src="img/slider-block.png")
+							.swiper-slide
+								img(src="img/slider-block.png")
+						+arrow
+						+e.page.swiper-pagination
+				.col-12.col-lg-6.col-text
+					+e.text-wrap
+						+e.H2.title Люкс яхта Sea-Legend
+						+e.caption Фантастическая яхта Sea Legend была построена в&nbsp;2019 году для проведения незабываемых дайвинг-сафари
+						+e.UL.list
+							li Длина: 42&nbsp;метра
+							li Ширина: 10&nbsp;метров
+							li Количество человек: 32
+							li 16&nbsp;кают, 32&nbsp;места
+							li Нижняя палуба, верхняя палуба и&nbsp;люкс
+							li Каждая каюта оборудована климат-контролем, тв, холодильников, ванная с&nbsp;горячей водой
+							li Каюта стандарт&nbsp;&mdash; 1100 евро с&nbsp;человека
+							li Каюта люкс&nbsp;&mdash; 1300 евро с&nbsp;человека
 	// end sSliderBlock

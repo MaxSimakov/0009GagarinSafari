@@ -66,6 +66,12 @@
 			margin-top: 32px;
 			width: 360px;
 			height: 70px;
+			@include media-breakpoint-down(md){
+				&:hover{
+					background-color: $danger;
+					border-color: $danger;
+				}
+			}
 			@include media-breakpoint-up(md){
 				width:292px;
 				height: 60px;
