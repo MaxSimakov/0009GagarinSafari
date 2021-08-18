@@ -53,6 +53,10 @@
     "postcss-preset-env": "^6.7.0",
     "sass": "^1.37.5",
     "webpack-stream": "^6.1.2",
+<<<<<<< HEAD
+=======
+    "del": "^6.0.0",
+>>>>>>> df28dc96d5f918d212f84f5b536ff5e95e95fbb0
     "wowjs": "^1.1.3"
   },
   "dependencies": {
