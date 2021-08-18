@@ -63,6 +63,8 @@
 			align-items: center;
 		}
 		@include media-breakpoint-up(lg){
+			padding-top: rem(79);
+			padding-bottom: rem(56);
 			padding-left: rem(109);
 			justify-content: center;
 		}
