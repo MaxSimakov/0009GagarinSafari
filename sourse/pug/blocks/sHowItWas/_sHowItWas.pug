@@ -8,7 +8,7 @@ mixin sHowItWas(data)
 				.swiper-wrapper
 					mixin slide(i)
 						+e.slide.swiper-slide
-							+e.item.bg-wrap(href=`img/@2x/howitwas-${i}.jpg` data-fancybox="howitwas-gallery")
+							+e.item.bg-wrap(href=`img/@2x/howitwas-${i}.jpg` data-fslightbox="howitwas-gallery")
 								+pic(`howitwas-${i}.jpg`, 'bg', 0).picture-bg
 					+slide(1)
 					+slide(2)
