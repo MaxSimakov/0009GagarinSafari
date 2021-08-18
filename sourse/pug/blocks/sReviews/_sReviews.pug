@@ -1,9 +1,28 @@
 mixin sReviews(data)
 	// start sReviews
 	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
+		+e.IMG.bg(src="img/reviews-bg.jpg")
 		.container
 			+b.section-title.text-center
-				h2 sReviews
-				
-			.row
+				h2 Отзывы
+			//- +e.slider--js.swiper-container 
+			//- 		.swiper-wrapper 
+			//- 			+e.slide.swiper-slide
+			//- 				+b.rew-item
+			//- 					+e.block
+			//- 						+e.head
+			//- 							.row 
+			//- 								.col
+			//- 									img(src="img/svg/rew-logo.svg" loading="lazy", alt="")
+			//- 								.col-auto
+			//- 									+b.star-block 
+			//- 										+icon("star").active
+			//- 										+icon("star").active
+			//- 										+icon("star").active
+			//- 										+icon("star").active
+			//- 										+icon("star")
+			//- 						+e.body 
+			//- 							.h6.mb-4 Мария Васильева
+			//- 							p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст...
+			//- 							.text-dark 22 февраля 2021
 	// end sReviews
