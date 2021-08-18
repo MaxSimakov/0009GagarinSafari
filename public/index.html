@@ -15,8 +15,9 @@
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
-					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">О нас</a></li>
+					<div class="menu-mobile__head"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+					</div>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О нас</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Яхта</a></li>
 						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обучение</a></li>
@@ -37,8 +38,36 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container">
 						<div class="row">
+							<div class="col-lg-auto col"><a href="/"><img src="img/svg/logo.svg" alt=""/></a></div>
+							<div class="col text-secondary d-none d-lg-block">Невероятное приключение <br> на 7 дней</div>
+							<div class="col-auto"><a href=""> </a></div>
+							<div class="d-none d-sm-block col-auto">
+								<div class="sContact__btns pt-0"><a class="sContact__btn btn btn-success" href="#">
+										<svg class="icon icon-whatsapp ">
+											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+										</svg></a><a class="sContact__btn btn btn-primary" href="#">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg></a></div>
+							</div>
+							<div class="col-auto text-end">
+								<a class="top-nav__tel" href="tel:+7(952)354-77-40">
+									<div class="top-nav__tel-icon d-sm-none">
+										<svg class="icon icon-tel ">
+											<use xlink:href="img/svg/sprite.svg#tel"></use>
+										</svg>
+									</div>
+									<div class="d-none d-sm-block">+7 (952) 354-77-40 </div>
+								</a>
+								<div class="d-none d-sm-block">
+									<a class="top-nav__link link-modal-js strong" href="#modal-call">Заказать звонок
+									</a>
+								</div>
+							</div>
 							<div class="col-auto">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								<div class="toggle-menu-mobile toggle-menu-mobile--js">
+									<div class="toggle-menu-mobile__title d-none d-xl-block"> Меню
+									</div><span></span>
 								</div>
 							</div>
 						</div>
@@ -49,11 +78,22 @@
 			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
+				<video class="fillItUp video" id="bgvid" playsinline="playsinline" poster="img/@2x/poster.jpg" autoplay="autoplay" muted="muted" loop="loop">
+					<source src="short_video3.mp4" type="video/mp4" loading="lazy"/>
+				</video>
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+					<div class="headerBlock__top-text"> Кайтинг на&nbsp;яхте по&nbsp;Египту с&nbsp;9&nbsp;по&nbsp;15&nbsp;октября
 					</div>
-					<div class="row"></div>
+					<h1>Кайт-сафари </h1>
+					<div></div>
+					<a class="headerBlock__btn link-modal-js" href="#modal-qwiz">Забронировать место
+					</a>
+				</div>
+				<div class="headerBlock__footer d-none d-md-block">
+					<a class="headerBlock__bottom scroll-link" href="#sDescription"> <span></span>
+						<div class="headerBlock__tt">Листайте вниз 
+						</div>
+					</a>
 				</div>
 			</div>
 			<!-- end headerBlock-->
@@ -781,20 +821,20 @@
 			<section class="sContact section" id="sContact">
 				<div class="container">
 					<h5>контакты</h5>
-					<h2>+7 (952) 354-77-40</h2>
+					<h2> <a class="text-body" href="tel:+7(952)354-77-40">+7 (952) 354-77-40</a></h2>
 					<div class="sContact__caption">или свяжитесь с&nbsp;нами в&nbsp;мессенджерах:
 					</div>
 					<div class="sContact__btns">
-						<div class="sContact__btn btn btn-success">
+						<a class="sContact__btn btn btn-success" href="#">
 							<svg class="icon icon-whatsapp ">
 								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
 							</svg><span>Whatsapp</span>
-						</div>
-						<div class="sContact__btn btn btn-primary">
+						</a>
+						<a class="sContact__btn btn btn-primary" href="#">
 							<svg class="icon icon-telegram ">
 								<use xlink:href="img/svg/sprite.svg#telegram"></use>
 							</svg><span>Telegram</span>
-						</div>
+						</a>
 					</div>
 				</div>
 			</section>

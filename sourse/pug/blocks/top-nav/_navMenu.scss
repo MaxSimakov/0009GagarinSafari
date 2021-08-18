@@ -1,7 +1,7 @@
 .menu{
-	display: flex;
-	list-style: none;
-	@include roww(20px);
+	// display: flex;
+	// list-style: none;
+	// @include roww(20px);
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
@@ -13,7 +13,9 @@
 	}
 	a{
 		display: block;
-		text-align: center;
-		padding: rem(20) rem(10);
+		// text-align: center;
+		padding: rem(18) rem(60);
+		color: $body-color;
+		font-size: rem(30);
 	}
 }

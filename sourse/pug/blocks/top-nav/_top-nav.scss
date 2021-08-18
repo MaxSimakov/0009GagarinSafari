@@ -1,6 +1,72 @@
+ 
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
+	@include media-breakpoint-up(xl) {
+
+		padding-top: var(--nav-sp-y);
+		padding-bottom: var(--nav-sp-y);
+	}
+	padding-top: var(--nav-sp-y);
+	padding-bottom: var(--nav-sp-y);
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+	border-bottom: 1px solid $light;
+	img{
+		width: rem(155);
+	}
+	.row{
+		align-items: center;
+	}
+	.sContact__btn{
+		width: rem(30) !important;
+		height: rem(30) !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 50%;
+		padding: 0;
+		.icon{
+			font-size: rem(20);
+			margin: 0;
+		}
+		&.btn-success{
+			margin-right: 0;
+		}
+	}
+	.text-secondary{
+		line-height: calc(23 / 18);
+	}
+	&__tel{
+		font-size: rem(24);
+		font-weight: bold;
+		line-height: 1;
+		&:not(:hover){
+			color: #1E2831;
+
+		}
+	}
+
+	&__tel-icon{
+		width: rem(60);
+		height: rem(60);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		background: #FF1B34;
+		.icon{
+			color: #fff;
+			font-size: rem(24);
+		}
+
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

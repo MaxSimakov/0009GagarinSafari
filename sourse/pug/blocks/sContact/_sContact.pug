@@ -3,13 +3,14 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			h5 контакты
-			h2 +7 (952) 354-77-40
+			h2 
+				a.text-body(href="tel:+7(952)354-77-40") +7 (952) 354-77-40
 			+e.caption или свяжитесь с&nbsp;нами в&nbsp;мессенджерах:
 			+e.btns
-				+e.btn.btn.btn-success
+				+e.btn.btn.btn-success(href="#")
 					+icon('whatsapp')
 					span Whatsapp
-				+e.btn.btn.btn-primary
+				+e.btn.btn.btn-primary(href="#")
 					+icon('telegram')
 					span Telegram
 	// end sContact

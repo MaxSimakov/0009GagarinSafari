@@ -47,6 +47,11 @@
 
 	--carousel-button-svg-stroke-width: 2.5;
 	--carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+	@include media-breakpoint-up(xl) {
+		--nav-sp-y: #{rem(20)};
+	}
+	--nav-sp-y: #{rem(15)};
+	--nav-h: calc(#{rem(60)} + var(--nav-sp-y) * 2);
 }
 
 @include media-breakpoint-up(xl) {

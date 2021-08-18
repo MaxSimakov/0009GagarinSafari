@@ -12,6 +12,9 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
+			+e.head
+				a(href="/")
+					img(src="img/svg/logo.svg", alt="")
 			+mnu()
 	//  мобильное меню
 mixin top-nav() 
@@ -19,8 +22,28 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
+				.col-lg-auto.col
+					a(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col.text-secondary.d-none.d-lg-block Невероятное приключение <br> на 7 дней
+				.col-auto
+					a(href="") 
+				.d-none.d-sm-block.col-auto
+					.sContact__btns.pt-0
+						a.sContact__btn.btn.btn-success(href="#")
+							+icon("whatsapp")
+						a.sContact__btn.btn.btn-primary(href="#")
+							+icon("telegram")
+				.col-auto.text-end
+					+e.tel(href="tel:+7(952)354-77-40")
+						+e.tel-icon.d-sm-none
+							+icon("tel")
+						.d-none.d-sm-block +7 (952) 354-77-40 
+					div.d-none.d-sm-block
+						+e.link.link-modal-js(href="#modal-call").strong Заказать звонок
 				.col-auto
 					+b.toggle-menu-mobile--js
+						+e.title.d-none.d-xl-block  Меню
 						span
 				//- .col.d-none.d-lg-block
 				//- 	+mnu()

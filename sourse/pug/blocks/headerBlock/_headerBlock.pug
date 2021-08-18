@@ -1,10 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+	+b.headerBlock.section#headerBlock( )&attributes(attributes)
+		video#bgvid.fillItUp.video(playsinline='playsinline' poster="img/@2x/poster.jpg" autoplay='autoplay' muted='muted' loop='loop')
+			
+			source(src='short_video3.mp4' type='video/mp4' loading='lazy')
 
-			.row
-						
+		.container
+			+e.top-text  Кайтинг на&nbsp;яхте по&nbsp;Египту с&nbsp;9&nbsp;по&nbsp;15&nbsp;октября
+			h1 Кайт-сафари 
+			div
+			+e.btn(href="#modal-qwiz").link-modal-js Забронировать место
+		+e.footer.d-none.d-md-block
+			+e.bottom.scroll-link(href="#sDescription") 
+				span
+				+e.tt Листайте вниз 
 	// end headerBlock
