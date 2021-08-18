@@ -9,12 +9,149 @@
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
-
+	.is-close{
+		top: 15px !important;
+		right: 15px !important;
+		color:#D9DEE2 !important;
+		&:hover{
+			@include media-breakpoint-up(lg){
+				opacity: 0.75;
+			}
+		}
+		svg{
+			stroke-width:2;
+			color: #D9DEE2 !important;
+			filter: none;
+			width: 24px;
+			height: 24px;
+		}
+	}
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
 	}
+	&--call{
+		max-width: 540px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 34px;
+		padding-right: 34px;
+		@include media-breakpoint-up(md){
+			max-width: 648px;
+			padding-left: 88px;
+			padding-right: 88px;
+		}
+		.form-wrap{
+			form{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&__input-wrap{
+				width: 100%;
+			}
+			input{
+				text-align: center;
+				border: 1px solid #D6E0EA;
+			}
+			.name{
+				margin-top: 30px;
+			}
+			.tel{
+				margin-top: 12px;
+			}
+			&__btn{
+				margin-top: 30px;
+				width: 320px;
+				@include media-breakpoint-up(md){
+					width: 280px;
+				}
+			}
+			&__caption{
+				padding-top: 20px;
+				text-align: center;
+				color: #2D3741;
+			}
+			&__agreement{
+				padding-top: 30px;
+				text-align: center;
+				color: #555555;
+				font-size: 16px;
+				line-height: 175%;
+			}
+		}
+	}
+	&--instructor{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		max-width: 720px;
+		@include media-breakpoint-up(lg){
+			max-width: 1320px;
+		}
+		.row{
+			@include media-breakpoint-down(lg){
+				--bs-gutter-y:40px;
+			}
+		}
+	}
+	&__person{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__photo{
+		width: 312px;
+		height: 312px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	&__name{
+		padding-top: 31px;
+		font-size: 30px;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		line-height: 150%;
+		font-weight: bold;
+	}
+	&__job{
+		padding-top: 20px;
+		text-align: center;
+		line-height: 150%;
+	}
+	&__exp{
+		font-weight: 500;
+		line-height: 150%;
+		text-align: center;
+		padding-top: 12px;
+	}
+	&__title{
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 150%;
+		color: #2D3741;
+		padding-bottom: 20px;
+		@include media-breakpoint-down(lg){
+			text-align: center;
+		}
+	}
+	&__longtext{
+		line-height: 175%;
+		color:#2D3741;
+		@include media-breakpoint-up(lg){
+			max-width: rem(590);
+		}
+	}
+	h4{
+		font-size: 60px;
+		@include media-breakpoint-up(md){
+			font-size: 42px;
+		}
+		font-weight: 500;
+		text-align: center;
+	}
+
 }
 
 a {

@@ -18,24 +18,14 @@ block variables
 	- let  bg= 'index.jpg'
 
 block title
-	- let  title= 'Гагарин Сафари'
+	- let  title= 'Модальные окна'
 	title= title
 block pagecontent 
-	+mob-mnu()
-	+header()
-		//- +topLine()
-		+top-nav()
-	+headerBlock()
-	+sDescription()
-	+sSliderBlock()
-	+sTraining()
-	+sInsructors()
-	+sProgram()
-	+sEntertainment()
-	+sTariffs()
-	+sHowItWas()
-	+sReviews()
-	//- +sForm()
-	+sContact()
-	+footer()
+	.section.container
+		mixin btn(t,a)
+			a.btn.btn-danger.m-2.link-modal-js(href=a  )= t 
+		+btn("Заказать звонок",'#modal-call')
+		+btn("Инструктор 1",'#modal-instructor-1')
+		+btn("Инструктор 2",'#modal-instructor-2')
+
 
