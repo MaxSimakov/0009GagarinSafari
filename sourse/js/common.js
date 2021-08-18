@@ -360,8 +360,8 @@ function eventHandler() {
 	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
 		// slidesPerView: 5,
 		// ...defaultSl,
-		// spaceBetween: 12,
-		spaceBetween: 0,
+		spaceBetween: 12,
+		// spaceBetween: 0,
 		slidesPerView: 'auto',
 		// freeMode: true,
 		// loopFillGroupWithBlank: true,
@@ -373,6 +373,12 @@ function eventHandler() {
 			nextEl: '.sEntertainment__arrows .swiper-button-next',
 			prevEl: '.sEntertainment__arrows .swiper-button-prev',
 		},
+		breakpoints: {
+			// when window width is >= 768px
+			768: {
+				spaceBetween: 0
+			}
+		}
 	});
 
 };
