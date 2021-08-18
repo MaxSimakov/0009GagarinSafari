@@ -3,7 +3,114 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+		
+	.swiper-pagination{
+		position: absolute;
+		bottom: 40px;
+		z-index: 10;
+	}
+	--swiperArrowPosition:60px;
+	@include media-breakpoint-down(md){
+		--swiperArrowPosition:18px;
+	}
+	padding-bottom: 0;
+	padding-top: 0;
+	background-color: $light;
+	&__slider{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		.swiper-slide{
+			&::after{
+				content: '';
+				position: absolute;
+				top:0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-image: linear-gradient(0deg, rgba(30, 40, 49, 0.05), rgba(30, 40, 49, 0.05));
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.col-slider{
+		padding-left: 0;
+		padding-right: 0;
+		@include media-breakpoint-down(lg){
+			order:1;
+		}
+	}
+	.col-text{
+		@include media-breakpoint-down(lg){
+			order:0;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&__text-wrap{
+		padding-bottom: var(--sPB);
+		padding-top: var(--sPT);
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-down(md){
+			padding-bottom: 0
+		}
+		@include media-breakpoint-down(lg){
+			align-items: center;
+		}
+		@include media-breakpoint-up(lg){
+			padding-left: rem(109);
+			justify-content: center;
+		}
+		@include media-breakpoint-between(md,lg){
+			max-width: 720px;
+		}
+		@include media-breakpoint-between(sm,md){
+			max-width: 540px;
+		}
+	}
+	&__title{
+		padding-bottom: 40px;
+		text-align: center;
+		@include media-breakpoint-between(md,lg){
+			padding-bottom: 30px;
+		}
+		@include media-breakpoint-up(lg){
+			max-width: rem(430);
+			text-align: left;
+		}
+		@include media-breakpoint-down(md){
+			max-width: 310px;
+		}
+	}
+	&__caption{
+		padding-bottom: 41px;
+		text-align: center;
+		@include media-breakpoint-between(md,lg){
+			padding-bottom: 30px;
+		}
+		@include media-breakpoint-up(lg){
+			max-width: rem(530);
+			text-align: left;
+		}
+	}
+	&__list{
+		padding-left: 18px;
+		@include media-breakpoint-up(lg){
+			max-width: rem(500);
+		}
+		li{
+			padding-bottom: rem(8.5);
+			padding-left: 3px;
+			&::marker{
+				color:$primary;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
