@@ -3,7 +3,56 @@ mixin sEntertainment(data)
 	+b.SECTION.sEntertainment.section#sEntertainment&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sEntertainment
-				
-			.row
+				h2 Развлечения
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i, t)
+						+e.slide.swiper-slide
+							+e.item.bg-wrap
+								+pic(`entertainment-${i}.jpg`, 'bg', 0).picture-bg
+								h5!= t
+					+slide(1, `Дайвинг`)
+					+slide(2, `Снорклинг`)
+					+slide(3, `Экскурсии`)
+					+slide(4, `Отдых в <br> джакузи и <br> лаундж-зонах`)
+					+slide(5, `Катание на <br> вейкборде`)
+					+slide(6, `Совместный <br> просмотр <br> фильмов`)
+					+slide(7, `Тренировки на <br> баланс-борде`)
+					+slide(8, `SUP-серфинг`)
+					+slide(9, `Игры (мафия, <br> настолки)`)
+					+slide(10, `Крутые <br> вечеринки`)
+			+e.arrows
+				+arrow
+			//- .row
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6
+			//- 		+e.img-wrap--lg
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6
+			//- 		+e.img-wrap--lg
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+			//- 	.col-6.col-lg-3
+			//- 		+e.img-wrap
+			//- 			img(src="img/description-image.png", alt="")
+
 	// end sEntertainment
