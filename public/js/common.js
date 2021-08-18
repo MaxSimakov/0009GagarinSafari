@@ -369,6 +369,18 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	}));
+	const SliderBlock = new Swiper(".sSliderBlock__slider--js", {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.sSliderBlock .swiper-button-next',
+			prevEl: '.sSliderBlock .swiper-button-prev'
+		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sSliderBlock__page.swiper-pagination"
+		}
+	});
 	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
 		spaceBetween: 12,
 		slidesPerView: 'auto',
