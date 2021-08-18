@@ -358,20 +358,27 @@ function eventHandler() {
 
 	});
 	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
 		spaceBetween: 12,
-		// spaceBetween: 0,
 		slidesPerView: 'auto',
-		// freeMode: true,
-		// loopFillGroupWithBlank: true,
 		touchRatio: 0.7,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		// loop: true,
 		navigation: {
 			nextEl: '.sEntertainment__arrows .swiper-button-next',
 			prevEl: '.sEntertainment__arrows .swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 768px
+			768: {
+				spaceBetween: 0
+			}
+		}
+	});
+	const sHowItWasSlider = new Swiper('.sHowItWas__slider--js', {
+		spaceBetween: 12,
+		slidesPerView: 'auto',
+		touchRatio: 0.7,
+		navigation: {
+			nextEl: '.sHowItWas__arrows .swiper-button-next',
+			prevEl: '.sHowItWas__arrows .swiper-button-prev',
 		},
 		breakpoints: {
 			// when window width is >= 768px
