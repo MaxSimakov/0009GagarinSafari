@@ -3,6 +3,11 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	.row{
+		@include media-breakpoint-down(lg){
+			--bs-gutter-y: 20px;
+		}
+	}
 	background-color: $light;
 	&__desc{
 		background-color: #fff;
@@ -33,6 +38,9 @@
 		padding-left: rem(13);
 		@include media-breakpoint-up(lg){
 			height: rem(400);
+		}
+		@include media-breakpoint-between(lg,xxl){
+			height: rem(520);
 		}
 		li{
 			padding-left: rem(4);
