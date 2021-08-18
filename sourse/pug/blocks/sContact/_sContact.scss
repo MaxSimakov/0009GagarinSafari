@@ -1,7 +1,71 @@
 
 	// start .sContact
-	.sContact {
-		 
+.sContact {
+	h5{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+	}
+	h2{
+		text-align: center;
+		font-weight: 700;
+		padding-top: 40px;
+	}
+	&__caption{
+		text-align: center;
+		padding-top: 18px;
+		@include media-breakpoint-up(sm){
+			padding-top: 40px;
+		}
+	}
+	&__btns{
+		padding-top: 38px;
+		display: flex;
+		justify-content: center;
+		.icon{
+			font-size: 24px;
+			@include media-breakpoint-up(sm){
+				margin-right: 10px;
+			}
+		}
+		span{
+			@include media-breakpoint-up(sm){
+				margin-left: 1px;
+			}
+		}
+		.btn{
+			width: 240px;
+			height: 70px;
+			@include media-breakpoint-up(sm){
+				height: 60px;
+			}
+			&-success{
+				margin-right: 6px;
+				@include media-breakpoint-down(md){
+					&:hover{
+						background-color: $success;
+						border-color: $success;
+					}
+				}
+				@include media-breakpoint-up(sm){
+					margin-right: 10px;
+				}
+			}
+			&-primary{
+				margin-left: 6px;
+				@include media-breakpoint-down(md){
+					&:hover{
+						background-color: $primary;
+						border-color: $primary;
+					}
+				}
+				@include media-breakpoint-up(sm){
+					margin-left: 10px;
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -2,8 +2,14 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			h5 контакты
+			h2 +7 (952) 354-77-40
+			+e.caption или свяжитесь с&nbsp;нами в&nbsp;мессенджерах:
+			+e.btns
+				+e.btn.btn.btn-success
+					+icon('whatsapp')
+					span Whatsapp
+				+e.btn.btn.btn-primary
+					+icon('telegram')
+					span Telegram
 	// end sContact

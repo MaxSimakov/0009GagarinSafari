@@ -3,16 +3,16 @@ mixin sDescription(data)
 	+b.SECTION.sDescription.section#sDescription&attributes(attributes)
 		.container
 			.row.row-desc-1
-				.col-12.col-md-6
+				.col-12.col-lg-6
 					+e.description
 						h2 Что такое Кайт-сафари
 						+e.description-caption Кайт сафари это неделя, проведенная в&nbsp;открытом море, на&nbsp;комфортабельной яхте которая станет для участников кайт-сафари передвижным отелем классом люкс. Это неделя проведенная вместе&nbsp;с веселыми и&nbsp;жизнерадостными людьми, для которых&nbsp;океан стал частью жизни.
-				.col-12.col-md-6
+				.col-12.col-lg-6
 					+e.image
 						img(src='img/description-image.png')
 			.row.row-desc-2
 				mixin desc-item(i,t,c)
-					.col-12.col-sm-6.col-md-4
+					.col-12.col-md-6.col-lg-4
 						+e.icon-border
 							+e.IMG.icon-image(src=`img/svg/description-${i}.svg`)
 						+e.icon-title!=t
