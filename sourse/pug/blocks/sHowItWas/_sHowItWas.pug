@@ -3,7 +3,21 @@ mixin sHowItWas(data)
 	+b.SECTION.sHowItWas.section#sHowItWas&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sHowItWas
-				
-			.row
+				h2 Развлечения
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i)
+						+e.slide.swiper-slide
+							+e.item.bg-wrap
+								+pic(`entertainment-${i}.jpg`, 'bg', 0).picture-bg
+					+slide(1)
+					+slide(2)
+					+slide(3)
+					+slide(4)
+					+slide(5)
+					
+			+e.arrows
+				+arrow
+			+e.bg.d-none.d-xl-block
+				img(src="img/entertainment-bg.jpg")
 	// end sHowItWas
