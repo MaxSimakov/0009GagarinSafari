@@ -369,6 +369,17 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	}));
+	const SliderBlock = new Swiper(".SliderBlock__slider--js", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".SliderBlock__page.swiper-pagination",
+			type: 'bullets',
+			clickable: true 
+		}
+	});
 	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
 		spaceBetween: 12,
 		slidesPerView: 'auto',
