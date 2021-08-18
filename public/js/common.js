@@ -368,7 +368,30 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
+	}));
+	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
+		// slidesPerView: 5,
+		// ...defaultSl,
+		spaceBetween: 12,
+		// spaceBetween: 0,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.7,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		// loop: true,
+		navigation: {
+			nextEl: '.sEntertainment__arrows .swiper-button-next',
+			prevEl: '.sEntertainment__arrows .swiper-button-prev'
+		},
+		breakpoints: {
+			// when window width is >= 768px
+			768: {
+				spaceBetween: 0
+			}
+		}
+	});
 }
 
 ;

@@ -10,19 +10,17 @@ mixin pic(i, bg,  media='576px')
 		-
 			const url= `img/@${path}/${expArr[0]}.${exp}`
 			const data = (ifLazy ?  url  : null)
-
 		if source
 			source(type=`image/${exp}` srcset=url)&attributes(attributes)
 		else
-			
-				img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy' )
-	
+			img(class=(bg=="bg" ? "object-fit-js": null ) src=url alt="" loading='lazy' )
+
 	// picture
-	
+
 	picture()&attributes(attributes) 
 		//- noscript(class="loading-lazy")
 		if media
-			
+
 			each val in [webpFormat,exp] 
 				each val2 in [smpath2,smpath1] 
 					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
