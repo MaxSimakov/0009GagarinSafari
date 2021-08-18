@@ -369,15 +369,16 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	}));
-	const SliderBlock = new Swiper(".SliderBlock__slider--js", {
+	const SliderBlock = new Swiper(".sSliderBlock__slider--js", {
+		slidesPerView: 'auto',
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: '.sSliderBlock .swiper-button-next',
+			prevEl: '.sSliderBlock .swiper-button-prev'
 		},
 		pagination: {
-			el: ".SliderBlock__page.swiper-pagination",
 			type: 'bullets',
-			clickable: true 
+			clickable: true,
+			el: ".sSliderBlock__page.swiper-pagination"
 		}
 	});
 	const sEntertainmentSlider = new Swiper('.sEntertainment__slider--js', {
