@@ -399,6 +399,31 @@ function eventHandler() {
 			}
 		}
 	});
+	const sReviewsSlider = new Swiper('.sReviews__slider--js', {
+		spaceBetween: 12,
+		slidesPerView: 1,
+		touchRatio: 0.7,
+		loop: true,
+		navigation: {
+			nextEl: '.sReviews__arrows .swiper-button-next',
+			prevEl: '.sReviews__arrows .swiper-button-prev',
+		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sReviews .swiper-pagination"
+		},
+		breakpoints: {
+			992: {
+				spaceBetween: 20,
+				slidesPerView: 2
+			},
+			1400: {
+				spaceBetween: 20,
+				slidesPerView: 3
+			}
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

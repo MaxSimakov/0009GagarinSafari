@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	//opacity: 0.7;
+	// opacity: 0.7;
 }
 
 body,
@@ -323,9 +323,9 @@ ul {
 		background-color: #e6e6e6;
 		outline: none !important;
 		@include mt;
-		margin-left: rem(8);
+		margin-left: 4px;
 		// padding-right: rem(8);
-		margin-right: rem(5);
+		margin-right: 4px;
 		display: inline-block;
 
 		&-active,
