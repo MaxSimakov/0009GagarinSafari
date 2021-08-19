@@ -1,7 +1,14 @@
+.compensate-for-scrollbar,
+body.fixed {
+
+	.top-nav {
+		
+		padding-right: var(--spacing-end);
+	}
+}
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	//
-
 	@include media-breakpoint-up(xl) {
 		padding-top: var(--nav-sp-y);
 		padding-bottom: var(--nav-sp-y);

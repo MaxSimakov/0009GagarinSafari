@@ -38,9 +38,15 @@
 		padding-left: 34px;
 		padding-right: 34px;
 		@include media-breakpoint-up(md){
-			max-width: rem(648);
+			padding-left: rem(40);
+			padding-right: rem(40);
+			max-width: rem(508);
+		}
+		@include media-breakpoint-up(xxl){
 			padding-left: rem(88);
 			padding-right: rem(88);
+
+			max-width: rem(648);
 		}
 		@include media-breakpoint-down(xxl){
 			padding-top: rem(25);

@@ -2,7 +2,10 @@
 	// display: flex;
 	// list-style: none;
 	// @include roww(20px);
+	@include media-breakpoint-up(xxl) {
 	padding-top: rem(40);
+}
+padding-top: rem(20);
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
@@ -15,12 +18,20 @@
 	a{
 		display: block;
 		// text-align: center;
-		padding: rem(12) rem(60);
+		@include media-breakpoint-up(xxl) {
+			padding: rem(12) .75rem;
+			font-size: rem(30);
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: rem(22);
+			padding: rem(8) .75rem;
+		}
+		font-size: rem(24);
+		padding: rem(10) .75rem;
 		@include media-breakpoint-down(md){
 			padding-top: rem(6);
 			padding-bottom: rem(6);
 		}
 		color: $body-color;
-		font-size: rem(30);
 	}
 }

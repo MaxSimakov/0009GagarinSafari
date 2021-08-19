@@ -60,12 +60,12 @@ $h: rem(2);
 	span:before {
 		// width: 32px;
 		height: 2px;
+		width: 18px;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
 		transform-origin: 50% 50%;
-	width: 18px;
 		@include media-breakpoint-up(xxl) {
 			width: 20px;
 		}
@@ -138,8 +138,8 @@ $h: rem(2);
 		opacity: 0;
 		left: auto;
 		top: 0;
-		right: 0;
-		// top: rem(30);
+		right: 15px;
+		top: rem(15);
 		// right: rem(30);
 		color: #c4c4c4 !important;
 		background-color: transparent !important;
@@ -148,11 +148,14 @@ $h: rem(2);
 		border: none !important;
 		// top: 10px;
 		z-index: 9999;
-
+		margin: 0;
 		span,
 		span:after,
 		span:before {
 			background-color: #c4c4c4;
+
+			// height: 2px;
+			width: 26px;
 		}
 
 		&.on {
@@ -167,7 +170,13 @@ $h: rem(2);
 		border-bottom: 1px solid #d9dee2;
 		a {
 			display: block;
-			padding: rem(20) rem(60);
+				@include media-breakpoint-up(xxl) {
+
+				}
+				padding: rem(20) .75rem;
+				img{
+					height: var(--btn-height);
+				}
 		}
 	}
 }

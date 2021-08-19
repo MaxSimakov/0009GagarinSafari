@@ -411,6 +411,10 @@ window.onload = function () {
 		});
 		wow.init();
 	}, 500);
+	window.setTimeout(function () {
+		document.body.classList.remove('loaded_hiding');
+		document.body.classList.remove('loaded');
+	}, 1000);
 }
 
 // window.onload = function () {
