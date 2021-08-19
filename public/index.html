@@ -77,10 +77,15 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<video class="fillItUp video" id="bgvid" playsinline="playsinline" poster="img/@2x/poster.jpg" autoplay="autoplay" muted="muted" loop="loop">
-					<source src="short_video3.mp4" type="video/mp4" loading="lazy"/>
-				</video>
+			<div class="headerBlock section bg-wrap" id="headerBlock">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/header-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/header-bg.webp"/>
+					<source type="image/wrap" srcset="img/@2x/header-bg.wrap" media="(min-width:576px)"/>
+					<source type="image/wrap" srcset="img/@1x/header-bg.wrap"/><img class="object-fit-js" src="img/@2x/header-bg.wrap" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
 					<div class="headerBlock__top-text"> Кайтинг на&nbsp;яхте по&nbsp;Египту с&nbsp;9&nbsp;по&nbsp;15&nbsp;октября
 					</div>
