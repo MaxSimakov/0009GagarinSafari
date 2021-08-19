@@ -9,7 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="index.jpg">
+	<body class="main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -546,7 +546,15 @@
 							</svg>
 						</div>
 					</div>
-					<div class="sEntertainment__bg d-none d-xl-block"><img src="img/entertainment-bg.jpg"/>
+					<div class="sEntertainment__bg d-none d-xl-block">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/entertainment-bg.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/entertainment-bg.webp"/>
+							<source type="image/jpg" srcset="img/@2x/entertainment-bg.jpg" media="(min-width:576px)"/>
+							<source type="image/jpg" srcset="img/@1x/entertainment-bg.jpg"/><img class="object-fit-js" src="img/@2x/entertainment-bg.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
 				</div>
 			</section>
@@ -690,7 +698,15 @@
 							</svg>
 						</div>
 					</div>
-					<div class="sHowItWas__bg d-none d-xl-block"><img src="img/howitwas-bg.jpg"/>
+					<div class="sHowItWas__bg d-none d-xl-block">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/howitwas-bg.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/howitwas-bg.webp"/>
+							<source type="image/jpg" srcset="img/@2x/howitwas-bg.jpg" media="(min-width:576px)"/>
+							<source type="image/jpg" srcset="img/@1x/howitwas-bg.jpg"/><img class="object-fit-js" src="img/@2x/howitwas-bg.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
 				</div>
 			</section>
