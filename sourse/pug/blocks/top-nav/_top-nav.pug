@@ -25,10 +25,10 @@ mixin top-nav()
 				.col-lg-auto.col
 					a(href="/")
 						img(src="img/svg/logo.svg", alt="")
-				.col.text-secondary.d-none.d-lg-block Невероятное приключение <br> на 7 дней
+				.col.text-secondary Невероятное приключение <br> на 7 дней
 				//- .col-auto
 				//- 	a(href="") 
-				.d-none.d-sm-block.col-auto
+				.d-none.d-md-block.col-auto
 					.sContact__btns.pt-0
 						a.sContact__btn.btn.btn-success(href="#")
 							+icon("whatsapp")
@@ -36,10 +36,10 @@ mixin top-nav()
 							+icon("telegram")
 				.col-auto.text-end
 					+e.tel(href="tel:+7(952)354-77-40")
-						+e.tel-icon.d-sm-none
+						+e.tel-icon.d-md-none
 							+icon("tel")
-						.d-none.d-sm-block +7 (952) 354-77-40 
-					div.d-none.d-sm-block
+						.d-none.d-md-block +7 (952) 354-77-40 
+					div.d-none.d-md-block
 						+e.link.link-modal-js(href="#modal-call").strong Заказать звонок
 				.col-auto
 					+b.toggle-menu-mobile--js
