@@ -16,6 +16,10 @@
 		display: block;
 		// text-align: center;
 		padding: rem(12) rem(60);
+		@include media-breakpoint-down(md){
+			padding-top: rem(6);
+			padding-bottom: rem(6);
+		}
 		color: $body-color;
 		font-size: rem(30);
 	}
