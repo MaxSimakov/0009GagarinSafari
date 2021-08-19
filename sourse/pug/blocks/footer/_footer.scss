@@ -1,101 +1,114 @@
-.footer{
+.footer {
 	padding-top: 27px;
 	padding-bottom: 26px;
 	background-color: $light;
 	margin-top: auto;
 	font-size: rem(18);
-	@include media-breakpoint-down(md){
+	@include media-breakpoint-down(md) {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
-	.row{
+	.row {
 		justify-content: space-between;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			flex-direction: column;
 			align-items: center;
 		}
 	}
-	&__copy{
-		max-width:rem(242);
+	&__copy {
+		max-width: rem(242);
 		padding: 0;
 		text-align: center;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			padding-top: 8px;
 			padding-bottom: 8px;
-			order:1;
+			order: 1;
 		}
 	}
-	&__policy{
-		color:$body-color;
-		width:rem(242);
+	&__policy {
+		color: $body-color;
+		width: rem(242);
 		padding: 0;
 		text-align: center;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			order: 0;
 		}
-		@include media-breakpoint-down(lg){
-			&:hover{
-				color:$body-color;
+		@include media-breakpoint-down(lg) {
+			&:hover {
+				color: $body-color;
 			}
 		}
 	}
-	&__develop{
+	&__develop {
 		padding: 0;
-		width:rem(242);
-		color:#607286;
+		width: rem(242);
+		color: #607286;
 		text-align: center;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			order: 2;
 		}
-		a{
-			color:$body-color;
+		a {
+			color: $body-color;
 			font-weight: 700;
-			&:hover{
-				color:#0f77b2;
+			&:hover {
+				color: #0f77b2;
 			}
-			@include media-breakpoint-down(lg){
-				&:hover{
-					color:$body-color;
+			@include media-breakpoint-down(lg) {
+				&:hover {
+					color: $body-color;
 				}
 			}
 		}
 	}
-// 
-@include media-breakpoint-up(xl) {}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
+	@include media-breakpoint-only(sm) {
+	}
 
-// 
-@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(md) {
+	}
 
-@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-@include media-breakpoint-only(lg) {}
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(lg) {
+	}
 
+	@include media-breakpoint-down(md) {
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+	}
 
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+	}
 }

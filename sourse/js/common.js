@@ -442,6 +442,20 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+window.onload = function () {
+	// document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		var wow = new WOW({
+			boxClass: 'wow',
+			mobile: false,
+			animateClass: 'animate__animated',
+			offset: 0
+		});
+		wow.init();
+	}, 500);
+}
+
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
 // 	window.setTimeout(function () {

@@ -4,6 +4,7 @@
 		// --sPB: ;
 		// --sTPB: ;
 		position: relative;
+		animation-name:fadeIn;
 	img{
 		@include media-breakpoint-down(xxl){
 			max-width: 100%;

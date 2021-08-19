@@ -4,6 +4,7 @@
 		// --sPB: ;
 		// --sTPB: ;
 	position: relative;
+	animation-name:fadeIn;
 	.row{
 		@include media-breakpoint-down(lg){
 			--bs-gutter-y: 20px;
