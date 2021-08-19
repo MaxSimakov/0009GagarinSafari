@@ -3,11 +3,16 @@
 
 	// margin-top: var(--nav-h);
 	min-height: 100vh;
-
+	//max-height: rem(880);
 	padding-top: calc(var(--nav-h) * 2);
 	z-index: 2;
 	overflow: hidden;
 	// margin-bottom: 1px;
+	&__caption{
+		color:white;
+		font-weight: 700;
+		padding-bottom: rem(60);
+	}
 	.picture-bg{
 		&::after{
 			content: '';
@@ -50,11 +55,14 @@
 	}
 	h1{
 		font-weight: bold;
-		margin-bottom: rem(30);
+		margin-bottom: rem(20);
 		color: #fff;
 		@include rfs(120px);
 		font-weight: 500;
 		text-transform: uppercase;
+		@include media-breakpoint-down(lg){
+			font-size: calc(1.79167rem + 10.3125vw);
+		}
 	}
 	.row{
 			@include media-breakpoint-up(md) {
