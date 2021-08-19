@@ -3,16 +3,16 @@ mixin sInsructors(data)
 	+b.SECTION.sInsructors.section.bg-wrap#sInsructors&attributes(attributes)
 		+pic('instructors-bg.jpg','bg').picture-bg
 		.container
-			h2 Наши инструкторы
+			h2(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn Наши инструкторы
 			.row
 				.col-12.col-lg-6
-					+e.item
+					+e.item(data-wow-delay="0.2s" data-wow-duration="1.3s").wow.animate__fadeIn
 						+e.IMG.item-photo(src="img/instructors-1.png")
 						+e.H4.item-title катя корниенко
 						+e.item-caption Любит свою жизнь, людей, ветер и&nbsp;готова этим делиться.&nbsp;Говорит, что почти 7&nbsp;лет назад&nbsp;ее загипнотизировал ветер и&nbsp;подарил ощущение полета.
 						+e.item-btn.btn.btn-danger.link-modal-js(href="#modal-instructor-1") Подробнее об инструкторе
 				.col-12.col-lg-6
-					+e.item
+					+e.item(data-wow-delay="0.2s" data-wow-duration="1.3s").wow.animate__fadeIn
 						+e.IMG.item-photo(src="img/instructors-2.png")
 						+e.H4.item-title Александр щербатенко
 						+e.item-caption Саша само добро, спокойствие и&nbsp;понимание. Вообще,&nbsp;дружелюбие&nbsp;&mdash; отличительная черта команды нашей&nbsp;кайт школы, и&nbsp;Саша, как и&nbsp;положено боссу, самый&nbsp;приветливый. Инструктор IKO.

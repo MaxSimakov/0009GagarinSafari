@@ -2,9 +2,9 @@ mixin sHowItWas(data)
 	// start sHowItWas
 	+b.SECTION.sHowItWas.section#sHowItWas&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 				h2 Как это было в том году
-			+e.slider--js.swiper-container
+			+e.slider--js.swiper-container(data-wow-delay="0.25s" data-wow-duration="1.3s").wow.animate__fadeIn
 				.swiper-wrapper
 					mixin slide(i)
 						+e.slide.swiper-slide

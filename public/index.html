@@ -6,10 +6,28 @@
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 575 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<style>body.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding:not(.loaded)::before { display: none; }</style>
+	<body class="loaded_hiding main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -85,7 +103,7 @@
 					<source type="image/wrap" srcset="img/@1x/header-bg.wrap"/><img class="object-fit-js" src="img/@2x/header-bg.wrap" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
-				<div class="container">
+				<div class="container wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 					<div class="headerBlock__top-text"> Кайтинг на&nbsp;яхте по&nbsp;Египту с&nbsp;9&nbsp;по&nbsp;15&nbsp;октября
 					</div>
 					<h1>Кайт-сафари </h1>
@@ -95,7 +113,7 @@
 					<a class="headerBlock__btn link-modal-js" href="#modal-call">Забронировать место
 					</a>
 				</div>
-				<div class="headerBlock__footer d-none d-md-block">
+				<div class="headerBlock__footer d-none d-md-block wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s">
 					<a class="headerBlock__bottom scroll-link" href="#sDescription"> <span></span>
 						<div class="headerBlock__tt">Листайте вниз 
 						</div>
@@ -104,23 +122,23 @@
 			</div>
 			<!-- end headerBlock-->
 			<!-- start sDescription-->
-			<section class="sDescription section wow fadeIn" id="sDescription" data-wow-delay="0s" data-wow-duration="1.5s">
+			<section class="sDescription section" id="sDescription">
 				<div class="container">
 					<div class="row row-desc-1">
 						<div class="col-12 col-lg-6">
-							<div class="sDescription__description">
+							<div class="sDescription__description wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 								<h2>Что такое Кайт-сафари</h2>
 								<div class="sDescription__description-caption">Кайт сафари это неделя, проведенная в&nbsp;открытом море, на&nbsp;комфортабельной яхте которая станет для участников кайт-сафари передвижным отелем классом люкс. Это неделя проведенная вместе&nbsp;с веселыми и&nbsp;жизнерадостными людьми, для которых&nbsp;океан стал частью жизни.
 								</div>
 							</div>
 						</div>
 						<div class="col-12 col-lg-6">
-							<div class="sDescription__image"><img src="img/description-image.png"/>
+							<div class="sDescription__image wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s"><img src="img/description-image.png"/>
 							</div>
 						</div>
 					</div>
 					<div class="row row-desc-2">
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-1.svg" alt="" role="presentation"/>
 								</div>
@@ -130,7 +148,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.2s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-2.svg" alt="" role="presentation"/>
 								</div>
@@ -140,7 +158,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.3s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-3.svg" alt="" role="presentation"/>
 								</div>
@@ -150,7 +168,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.4s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-4.svg" alt="" role="presentation"/>
 								</div>
@@ -160,7 +178,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.5s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-5.svg" alt="" role="presentation"/>
 								</div>
@@ -170,7 +188,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 col-lg-4">
+						<div class="col-12 col-md-6 col-lg-4 wow animate__fadeIn" data-wow-delay="0.6s" data-wow-duration="1.2s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-6.svg" alt="" role="presentation"/>
 								</div>
@@ -195,11 +213,11 @@
 			</section>
 			<!-- end sDescription-->
 			<!-- start sSliderBlock-->
-			<section class="sSliderBlock section wow fadeInUp" id="sSliderBlock" data-wow-delay="0s" data-wow-duration="1.2s">
+			<section class="sSliderBlock section" id="sSliderBlock">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12 col-lg-6 col-slider">
-							<div class="sSliderBlock__slider sSliderBlock__slider--js swiper-container">
+							<div class="sSliderBlock__slider sSliderBlock__slider--js swiper-container wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide"><img src="img/slider-block.png"/></div>
 									<div class="swiper-slide"><img src="img/slider-block.png"/></div>
@@ -221,7 +239,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-6 col-text">
-							<div class="sSliderBlock__text-wrap">
+							<div class="sSliderBlock__text-wrap wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.4s">
 								<h2 class="sSliderBlock__title">Люкс яхта Sea-Legend
 								</h2>
 								<div class="sSliderBlock__caption">Фантастическая яхта Sea Legend была построена в&nbsp;2019 году для проведения незабываемых дайвинг-сафари
@@ -243,14 +261,14 @@
 			</section>
 			<!-- end sSliderBlock-->
 			<!-- start sTraining-->
-			<section class="sTraining section wow fadeIn" id="sTraining" data-wow-delay="0s" data-wow-duration="1.5s">
+			<section class="sTraining section" id="sTraining">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0s" data-wow-duration="1.2s">
 						<h2>Обучение для всех</h2>
 					</div>
 					<div class="row">
-						<div class="col-12 col-lg-6 img1"><img src="img/training-1.png"/></div>
-						<div class="col-12 col-lg-6 caption--1">
+						<div class="col-12 col-lg-6 img1 wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s"><img src="img/training-1.png"/></div>
+						<div class="col-12 col-lg-6 caption--1 wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.4s">
 							<h4 class="h4-1">для начинающих</h4>
 							<ul class="ul-1">
 								<li>Cпокойная, прозрачная вода </li>
@@ -262,7 +280,7 @@
 								<li>Медицинская страховка</li>
 							</ul>
 						</div>
-						<div class="col-12 col-lg-6 caption--2">
+						<div class="col-12 col-lg-6 caption--2 wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.4s">
 							<h4 class="h4-2">Для продвинутых</h4>
 							<ul class="ul-2">
 								<li>Флэт, а&nbsp;с&nbsp;ним любой элемент учить легче и&nbsp;быстрее</li>
@@ -274,7 +292,7 @@
 								<li>Медицинская страховка</li>
 							</ul>
 						</div>
-						<div class="col-12 col-lg-6 img2"><img src="img/training-2.png"/></div>
+						<div class="col-12 col-lg-6 img2 wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s"><img src="img/training-2.png"/></div>
 					</div>
 					<div class="sTraining__bg1 d-none d-xl-block">
 						<!-- picture-->
@@ -300,7 +318,7 @@
 			</section>
 			<!-- end sTraining-->
 			<!-- start sInsructors-->
-			<section class="sInsructors section bg-wrap wow fadeInUp" id="sInsructors" data-wow-delay="0s" data-wow-duration="1.2s">
+			<section class="sInsructors section bg-wrap" id="sInsructors">
 				<!-- picture-->
 				<picture class="picture-bg"> 
 					<source type="image/webp" srcset="img/@2x/webp/instructors-bg.webp" media="(min-width:576px)"/>
@@ -310,10 +328,10 @@
 				</picture>
 				<!-- /picture-->
 				<div class="container">
-					<h2>Наши инструкторы</h2>
+					<h2 class="wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">Наши инструкторы</h2>
 					<div class="row">
 						<div class="col-12 col-lg-6">
-							<div class="sInsructors__item"><img class="sInsructors__item-photo" src="img/instructors-1.png" alt="" role="presentation"/>
+							<div class="sInsructors__item wow animate__fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s"><img class="sInsructors__item-photo" src="img/instructors-1.png" alt="" role="presentation"/>
 								<h4 class="sInsructors__item-title">катя корниенко
 								</h4>
 								<div class="sInsructors__item-caption">Любит свою жизнь, людей, ветер и&nbsp;готова этим делиться.&nbsp;Говорит, что почти 7&nbsp;лет назад&nbsp;ее загипнотизировал ветер и&nbsp;подарил ощущение полета.
@@ -323,7 +341,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-6">
-							<div class="sInsructors__item"><img class="sInsructors__item-photo" src="img/instructors-2.png" alt="" role="presentation"/>
+							<div class="sInsructors__item wow animate__fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s"><img class="sInsructors__item-photo" src="img/instructors-2.png" alt="" role="presentation"/>
 								<h4 class="sInsructors__item-title">Александр щербатенко
 								</h4>
 								<div class="sInsructors__item-caption">Саша само добро, спокойствие и&nbsp;понимание. Вообще,&nbsp;дружелюбие&nbsp;&mdash; отличительная черта команды нашей&nbsp;кайт школы, и&nbsp;Саша, как и&nbsp;положено боссу, самый&nbsp;приветливый. Инструктор IKO.
@@ -337,13 +355,13 @@
 			</section>
 			<!-- end sInsructors-->
 			<!-- start sProgram-->
-			<section class="sProgram section wow fadeIn" id="sProgram" data-wow-delay="0s" data-wow-duration="1.5s">
+			<section class="sProgram section" id="sProgram">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<h2>Программа Кайт-сафари</h2>
 					</div>
 					<div class="row">
-						<div class="col-12 col-lg-3">
+						<div class="col-12 col-lg-3 wow animate__fadeIn" data-wow-delay="0.2s" data-wow-duration="1.3s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/program-1.svg" alt="" role="presentation"/>
 								</div>
@@ -360,7 +378,7 @@
 								</svg>
 							</div>
 						</div>
-						<div class="col-12 col-lg-3">
+						<div class="col-12 col-lg-3 wow animate__fadeIn" data-wow-delay="0.35s" data-wow-duration="1.3s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-4.svg" alt="" role="presentation"/>
 								</div>
@@ -377,7 +395,7 @@
 								</svg>
 							</div>
 						</div>
-						<div class="col-12 col-lg-3">
+						<div class="col-12 col-lg-3 wow animate__fadeIn" data-wow-delay="0.5s" data-wow-duration="1.3s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/description-1.svg" alt="" role="presentation"/>
 								</div>
@@ -394,7 +412,7 @@
 								</svg>
 							</div>
 						</div>
-						<div class="col-12 col-lg-3">
+						<div class="col-12 col-lg-3 wow animate__fadeIn" data-wow-delay="0.65s" data-wow-duration="1.3s">
 							<div class="desc-item">
 								<div class="desc-item__border"><img class="desc-item__image" src="img/svg/program-2.svg" alt="" role="presentation"/>
 								</div>
@@ -424,12 +442,12 @@
 			</section>
 			<!-- end sProgram-->
 			<!-- start sEntertainment-->
-			<section class="sEntertainment section wow fadeInUp" id="sEntertainment" data-wow-delay="0s" data-wow-duration="1.2s">
+			<section class="sEntertainment section" id="sEntertainment">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<h2>Развлечения</h2>
 					</div>
-					<div class="sEntertainment__slider sEntertainment__slider--js swiper-container">
+					<div class="sEntertainment__slider sEntertainment__slider--js swiper-container wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.3s">
 						<div class="swiper-wrapper">
 								<div class="sEntertainment__slide swiper-slide">
 									<div class="sEntertainment__item bg-wrap">
@@ -560,14 +578,14 @@
 			</section>
 			<!-- end sEntertainment-->
 			<!-- start sTariffs-->
-			<section class="sTariffs section bg-wrap wow fadeIn" id="sTariffs" data-wow-delay="0s" data-wow-duration="1.5s">
+			<section class="sTariffs section bg-wrap" id="sTariffs">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<h2>Тарифы</h2>
 					</div>
 					<div class="row">
 						<div class="col-12 col-lg-6">
-							<div class="sTariffs__desc">
+							<div class="sTariffs__desc wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s">
 								<h3 class="sTariffs__title">базовый
 								</h3>
 								<div class="sTariffs__caption">Ты&nbsp;уверенно катаешься на&nbsp;кайте и&nbsp;имеешь собственное снаряжение
@@ -591,7 +609,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-6">
-							<div class="sTariffs__desc">
+							<div class="sTariffs__desc wow animate__fadeIn" data-wow-delay="0.3s" data-wow-duration="1.2s">
 								<h3 class="sTariffs__title">С обучением
 								</h3>
 								<div class="sTariffs__caption">Ты&nbsp;не&nbsp;пробовал кайт ранее или дошел в&nbsp;обучении только до&nbsp;вставания на&nbsp;доску
@@ -631,12 +649,12 @@
 			</section>
 			<!-- end sTariffs-->
 			<!-- start sHowItWas-->
-			<section class="sHowItWas section wow fadeInUp" id="sHowItWas" data-wow-delay="0s" data-wow-duration="1.2s">
+			<section class="sHowItWas section" id="sHowItWas">
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<h2>Как это было в том году</h2>
 					</div>
-					<div class="sHowItWas__slider sHowItWas__slider--js swiper-container">
+					<div class="sHowItWas__slider sHowItWas__slider--js swiper-container wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.3s">
 						<div class="swiper-wrapper">
 								<div class="sHowItWas__slide swiper-slide">
 									<a class="sHowItWas__item bg-wrap" href="img/@2x/howitwas-1.jpg" data-fslightbox="howitwas-gallery">
@@ -712,7 +730,7 @@
 			</section>
 			<!-- end sHowItWas-->
 			<!-- start sReviews-->
-			<section class="sReviews section bg-wrap wow fadeIn" id="sReviews" data-wow-delay="0s" data-wow-duration="1.5s">
+			<section class="sReviews section bg-wrap" id="sReviews">
 				<!-- picture-->
 				<picture class="picture-bg pic-rew"> 
 					<source type="image/webp" srcset="img/@2x/webp/reviews-bg.webp" media="(min-width:576px)"/>
@@ -723,10 +741,10 @@
 				<!-- /picture-->
 				<!--+e.IMG.bg(src="img/reviews-bg.jpg")-->
 				<div class="container">
-					<div class="section-title text-center">
+					<div class="section-title text-center wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<h2>Отзывы</h2>
 					</div>
-					<div class="sReviews__slider-wrap">
+					<div class="sReviews__slider-wrap wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.3s">
 						<div class="sReviews__slider sReviews__slider--js swiper-container"> 
 							<div class="swiper-wrapper">
 									<div class="sReviews__slide swiper-slide">
@@ -893,13 +911,13 @@
 			</section>
 			<!-- end sReviews-->
 			<!-- start sContact-->
-			<section class="sContact section wow fadeIn" id="sContact" data-wow-delay="0s" data-wow-duration="1.5s">
-				<div class="container">
+			<section class="sContact section" id="sContact">
+				<div class="container wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 					<h5>контакты</h5>
-					<h2> <a class="text-body" href="tel:+7(952)354-77-40">+7 (952) 354-77-40</a></h2>
+					<h2><a class="text-body" href="tel:+7(952)354-77-40">+7 (952) 354-77-40</a></h2>
 					<div class="sContact__caption">или свяжитесь с&nbsp;нами в&nbsp;мессенджерах:
 					</div>
-					<div class="sContact__btns">
+					<div class="sContact__btns wow animate__fadeIn" data-wow-delay="0.25s" data-wow-duration="1.2s">
 						<a class="sContact__btn btn btn-success" href="#">
 							<svg class="icon icon-whatsapp ">
 								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
@@ -916,7 +934,7 @@
 			<!-- end sContact-->
 			<footer class="footer" id="footer">
 				<div class="container">
-					<div class="row">
+					<div class="row wow animate__fadeIn" data-wow-delay="0.1s" data-wow-duration="1.2s">
 						<div class="footer__copy">&copy;&nbsp;2021 Гагарин Кайт.
 						</div>
 						<a class="footer__policy" href="#">Политика конфеденциальности

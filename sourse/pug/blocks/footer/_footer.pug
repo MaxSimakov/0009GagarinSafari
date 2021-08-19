@@ -1,7 +1,7 @@
 mixin footer()
 	+b.FOOTER.footer#footer
 		.container
-			.row
+			.row(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 				+e.copy &copy;&nbsp;2021 Гагарин Кайт.
 				+e.policy(href="#") Политика конфеденциальности
 				+e.develop Разработка сайта – 

@@ -1,12 +1,12 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
+		.container(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 			h5 контакты
-			h2 
+			h2
 				a.text-body(href="tel:+7(952)354-77-40") +7 (952) 354-77-40
 			+e.caption или свяжитесь с&nbsp;нами в&nbsp;мессенджерах:
-			+e.btns
+			+e.btns(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 				+e.btn.btn.btn-success(href="#")
 					+icon('whatsapp')
 					span Whatsapp

@@ -4,7 +4,7 @@ mixin sSliderBlock(data)
 		.container-fluid
 			.row
 				.col-12.col-lg-6.col-slider
-					+e.slider--js.swiper-container
+					+e.slider--js.swiper-container(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 						.swiper-wrapper
 							.swiper-slide
 								img(src="img/slider-block.png")
@@ -17,7 +17,7 @@ mixin sSliderBlock(data)
 						+arrow
 						+e.page.swiper-pagination
 				.col-12.col-lg-6.col-text
-					+e.text-wrap
+					+e.text-wrap(data-wow-delay="0.1s" data-wow-duration="1.4s").wow.animate__fadeIn
 						+e.H2.title Люкс яхта Sea-Legend
 						+e.caption Фантастическая яхта Sea Legend была построена в&nbsp;2019 году для проведения незабываемых дайвинг-сафари
 						+e.UL.list

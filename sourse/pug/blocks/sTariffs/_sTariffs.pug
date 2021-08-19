@@ -2,11 +2,11 @@ mixin sTariffs(data)
 	// start sTariffs
 	+b.SECTION.sTariffs.section.bg-wrap#sTariffs&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 				h2 Тарифы
 			.row
 				.col-12.col-lg-6
-					+e.desc
+					+e.desc(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 						+e.H3.title базовый
 						+e.caption Ты&nbsp;уверенно катаешься на&nbsp;кайте и&nbsp;имеешь собственное снаряжение
 						+e.price &euro;&nbsp;1200
@@ -22,7 +22,7 @@ mixin sTariffs(data)
 						+e.btn-wrap
 							+e.btn.btn.btn-danger.link-modal-js(href="#modal-call") Оставить заявку
 				.col-12.col-lg-6
-					+e.desc
+					+e.desc(data-wow-delay="0.3s" data-wow-duration="1.2s").wow.animate__fadeIn
 						+e.H3.title С обучением
 						+e.caption Ты&nbsp;не&nbsp;пробовал кайт ранее или дошел в&nbsp;обучении только до&nbsp;вставания на&nbsp;доску
 						+e.price &euro;&nbsp;1700
