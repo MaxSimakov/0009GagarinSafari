@@ -2,12 +2,12 @@ mixin sTraining(data)
 	// start sTraining
 	+b.SECTION.sTraining.section#sTraining&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-wow-delay="0s" data-wow-duration="1.2s").wow.animate__fadeIn
 				h2 Обучение для всех
 			.row
-				.col-12.col-lg-6.img1
+				.col-12.col-lg-6.img1(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 					img(src="img/training-1.png")
-				.col-12.col-lg-6.caption--1
+				.col-12.col-lg-6.caption--1(data-wow-delay="0.1s" data-wow-duration="1.4s").wow.animate__fadeIn
 					h4.h4-1 для начинающих
 					ul.ul-1
 						li Cпокойная, прозрачная вода 
@@ -17,7 +17,7 @@ mixin sTraining(data)
 						li Ежедневная фотофиксация катания с&nbsp;разбором ошибок и&nbsp;обучающими лекциями
 						li Предоставление полного комплекта снаряжения (лучше кайты, планка, доска, трапеция, гидрик)
 						li Медицинская страховка
-				.col-12.col-lg-6.caption--2
+				.col-12.col-lg-6.caption--2(data-wow-delay="0.1s" data-wow-duration="1.4s").wow.animate__fadeIn
 					h4.h4-2 Для продвинутых
 					ul.ul-2
 						li Флэт, а&nbsp;с&nbsp;ним любой элемент учить легче и&nbsp;быстрее
@@ -27,7 +27,7 @@ mixin sTraining(data)
 						li Вокруг тебя много инструкторов&nbsp;&mdash; всегда можно спросить совета или взять урок
 						li Ежедневная фотофиксация катания с&nbsp;разбором ошибок и&nbsp;обучающими лекциями
 						li Медицинская страховка
-				.col-12.col-lg-6.img2
+				.col-12.col-lg-6.img2(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 					img(src="img/training-2.png")
 			+e.bg1.d-none.d-xl-block
 				+pic('training-bg-1.jpg')

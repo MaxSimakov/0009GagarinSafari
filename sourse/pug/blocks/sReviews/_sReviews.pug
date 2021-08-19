@@ -4,9 +4,9 @@ mixin sReviews(data)
 		+pic('reviews-bg.jpg','bg').picture-bg.pic-rew
 		//+e.IMG.bg(src="img/reviews-bg.jpg")
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 				h2 Отзывы
-			+e.slider-wrap
+			+e.slider-wrap(data-wow-delay="0.25s" data-wow-duration="1.3s").wow.animate__fadeIn
 				+e.slider--js.swiper-container 
 					.swiper-wrapper
 						mixin slide(t, p)

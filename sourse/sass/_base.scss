@@ -47,8 +47,12 @@ body {
 	}
 
 	&.loaded {
-		pointer-events: visible;
-		opacity: 1;
+		pointer-events: visible !important;
+		opacity: 1 !important;
+		&::before {
+			display: block;
+		}
+		// transition: none;
 	}
 
 	&::before {

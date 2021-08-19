@@ -4,24 +4,24 @@ mixin sDescription(data)
 		.container
 			.row.row-desc-1
 				.col-12.col-lg-6
-					+e.description
+					+e.description(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 						h2 Что такое Кайт-сафари
 						+e.description-caption Кайт сафари это неделя, проведенная в&nbsp;открытом море, на&nbsp;комфортабельной яхте которая станет для участников кайт-сафари передвижным отелем классом люкс. Это неделя проведенная вместе&nbsp;с веселыми и&nbsp;жизнерадостными людьми, для которых&nbsp;океан стал частью жизни.
 				.col-12.col-lg-6
-					+e.image
+					+e.image(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 						img(src='img/description-image.png')
 			.row.row-desc-2
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-1`,`люкс яхта`,`Незабываемое путешествие на&nbsp;передвижном 5-ти звездочном отеле в&nbsp;море`)
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.2s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-2`,`Обучение для новичков<br />и&nbsp;продвинутых`,`IKO инструкторы которые помогут встать на&nbsp;доску как совсем начинающим так и&nbsp;научить крутым трюкам тех кто уже катается`)
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.3s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-3`,`All inclusive`,`Роскошные каюты, 3-х разовое питание`)
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.4s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-4`,`Кайтсерфинг в&nbsp;море`,`Постоянный ветер на&nbsp;флет-спотах в&nbsp;Красном море`)
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.5s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-5`,`Снаряжение на&nbsp;любой вкус<br />и&nbsp;уровень`,`Лучшее оборудование под любой ветер`)
-				.col-12.col-md-6.col-lg-4
+				.col-12.col-md-6.col-lg-4(data-wow-delay="0.6s" data-wow-duration="1.2s").wow.animate__fadeIn
 					+desc-item(`description-6`,`Развлечения и&nbsp;досуг`,`Снорклинг, дайвинг, массаж, вечеринки на&nbsp;яхте. Отдых который вы&nbsp;запомните!`)
 			+e.background.d-none.d-xl-block
 				+pic('description-bg.jpg')

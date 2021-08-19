@@ -2,25 +2,25 @@ mixin sProgram(data)
 	// start sProgram
 	+b.SECTION.sProgram.section#sProgram&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 				h2 Программа Кайт-сафари
 			.row
-				.col-12.col-lg-3
+				.col-12.col-lg-3(data-wow-delay="0.2s" data-wow-duration="1.3s").wow.animate__fadeIn
 					+desc-item(`program-1`,`1 день`,`Прилёт, встреча в&nbsp;аэропорту, трансфер на&nbsp;яхту. Ужин и&nbsp;ночевка на&nbsp;яхте.`)
 				.col-12.d-block.d-lg-none
 					.arr-col
 						+icon('program-arrow')
-				.col-12.col-lg-3
+				.col-12.col-lg-3(data-wow-delay="0.35s" data-wow-duration="1.3s").wow.animate__fadeIn
 					+desc-item(`description-4`,`2-6 дни`,`В&nbsp;ветреные дни: обучение кайтсёрфингу, катание, вечерние лекции и&nbsp;семинары.<br />В&nbsp;безветренные дни и&nbsp;по&nbsp;желанию: вейкборд, падлборд, снорклинг, дайвинг, рыбалка.`)
 				.col-12.d-block.d-lg-none
 					.arr-col
 						+icon('program-arrow')
-				.col-12.col-lg-3
+				.col-12.col-lg-3(data-wow-delay="0.5s" data-wow-duration="1.3s").wow.animate__fadeIn
 					+desc-item(`description-1`,`7 день`,`До&nbsp;обеда: катание, обучение, после обеда: переход в&nbsp;яхт-клуб Хургады. Вечерняя программа.`)
 				.col-12.d-block.d-lg-none
 					.arr-col
 						+icon('program-arrow')
-				.col-12.col-lg-3
+				.col-12.col-lg-3(data-wow-delay="0.65s" data-wow-duration="1.3s").wow.animate__fadeIn
 					+desc-item(`program-2`,`8 день`,`Трансфер в&nbsp;аэропорт.`)
 				.arr1
 					+icon('program-arrow')

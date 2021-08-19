@@ -5,13 +5,13 @@ mixin headerBlock()
 			
 		//- 	source(src='short_video3.mp4' type='video/mp4' loading='lazy')
 		+pic('header-bg.wrap','bg').picture-bg
-		.container
+		.container(data-wow-delay="0.1s" data-wow-duration="1.2s").wow.animate__fadeIn
 			+e.top-text  Кайтинг на&nbsp;яхте по&nbsp;Египту с&nbsp;9&nbsp;по&nbsp;15&nbsp;октября
 			h1 Кайт-сафари 
 			+e.H5.caption Успей забронировать место&nbsp;&mdash; осталось 25&nbsp;мест
 			div
 			+e.btn(href="#modal-call").link-modal-js Забронировать место
-		+e.footer.d-none.d-md-block
+		+e.footer.d-none.d-md-block(data-wow-delay="0.25s" data-wow-duration="1.2s").wow.animate__fadeIn
 			+e.bottom.scroll-link(href="#sDescription") 
 				span
 				+e.tt Листайте вниз 
