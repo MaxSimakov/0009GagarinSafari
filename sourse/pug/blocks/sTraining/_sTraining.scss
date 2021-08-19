@@ -46,8 +46,11 @@
 		
 	}
 	ul{
+		@include media-breakpoint-down(lg){
+			padding-left: rem(16);
+		}
 		@include media-breakpoint-down(sm){
-			padding-left: 30px;
+			padding-left: 20px;
 		}
 		li{
 			padding-bottom: rem(8);
