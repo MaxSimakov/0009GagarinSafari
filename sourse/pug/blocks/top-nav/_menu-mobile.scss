@@ -19,8 +19,8 @@ $h: rem(2);
 			position: absolute;
 			right: calc(100% + #{rem(18)});
 			color: #1e2831;
-			padding-top: 1em;
-			padding-bottom: 1em;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 		&::before {
 			content: "";

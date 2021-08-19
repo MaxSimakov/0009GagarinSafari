@@ -77,7 +77,7 @@
 									<div class="d-none d-md-block">+7 (952) 354-77-40 </div>
 								</a>
 								<div class="d-none d-md-block">
-									<a class="top-nav__link link-modal-js strong" href="#modal-call">Заказать звонок
+									<a class="top-nav__link link-modal-js strong" href="#modal-call" data-title="Заказать звонок" data-btn="Заказать звонок" data-order="Заказать звонок в шапке">Заказать звонок
 									</a>
 								</div>
 							</div>
@@ -948,18 +948,23 @@
 		<!--  start modals-->
 		<div class="modal-win modal-win--call" id="modal-call" style="display: none">
 			<div class="form-wrap">
-				<form>
-					<h4>Заказать звонок</h4>
+				<form> 
+					<input class="order" name="order" type="hidden" value="Заявка  с сайта"/>
+					<input class="utm_source" name="utm_source" type="hidden"/>
+					<input class="utm_term" name="utm_term" type="hidden"/>
+					<input class="utm_medium" name="utm_medium" type="hidden"/>
+					<input class="utm_campaign" name="utm_campaign" type="hidden"/>
+					<div class="h4">Заказать звонок</div>
 					<div class="form-wrap__caption">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control name" name="text" type="text" placeholder="Ваше имя"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control tel" name="tel" type="tel" placeholder="Ваш телефон"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__btn btn btn-danger">Забронировать место
-					</div>
+					<button class="form-wrap__btn" type="submit">Забронировать место
+					</button>
 					<div class="form-wrap__agreement">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
 					</div>
 				</form>

@@ -1,7 +1,10 @@
 .form-wrap{
+	&__caption{
+		margin-bottom: rem(30);
+	}
  	&__input-wrap{
 			// @extend .form-group;
-			
+			margin-bottom: rem(12);
 		}
 		&__input{
 			// @extend .form-control;
@@ -9,7 +12,9 @@
 		 resize: none;
  	}
  	&__btn{
+		 @extend .btn, .btn-danger;
  		cursor: pointer;
+		 margin-top: rem(30);
  	}
  	label{
  		width: 100%;

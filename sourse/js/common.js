@@ -56,30 +56,28 @@ const JSCCommon = {
 			fancybox.close();
 		})
 		// fancybox.defaults.backFocus = false;
-		const linkModal = document.querySelectorAll(link);
-		function addData() {
-			linkModal.forEach(element => {
-				element.addEventListener('click', () => {
-					let modal = document.querySelector(element.getAttribute("href"));
-					const data = element.dataset;
-
-					function setValue(val, elem) {
-						if (elem && val) {
-							const el = modal.querySelector(elem)
-							el.tagName == "INPUT"
-								? el.value = val
-								: el.innerHTML = val;
-							// console.log(modal.querySelector(elem).tagName)
-						}
+		// const linkModal = document.querySelectorAll(link);
+		
+		document.addEventListener("click", function(event) {
+			const linkModal = event.target.closest(link);
+			if (!linkModal) return;
+			
+			let modal = document.querySelector(linkModal.getAttribute("href"));
+			console.log(modal);
+			const data = linkModal.dataset; 
+				function setValue(val, elem) {
+					if (elem && val) {
+						const el = modal.querySelector(elem)
+						el.tagName == "INPUT"
+							? el.value = val
+							: el.innerHTML = val;
+						// console.log(modal.querySelector(elem).tagName)
 					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
-				})
+				}
+				setValue(data.title, '.h4'); 
+				// setValue(data.order, '.order'); 
+				setValue(data.btn, '.form-wrap__btn'); 
 			})
-		}
-		if (linkModal) addData();
 	},
 	// /modalCall
 	toggleMenu() {
@@ -185,47 +183,6 @@ const JSCCommon = {
 		if (isIE11) {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
-	},
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				fancybox.close();
-				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
 	},
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
