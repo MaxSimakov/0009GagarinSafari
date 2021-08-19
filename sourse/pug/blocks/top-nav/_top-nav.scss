@@ -22,7 +22,7 @@
 	.row {
 		align-items: center;
 		--bs-gutter-x: #{rem(12)};
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			--bs-gutter-x: 1.6666665rem;
 		}
 	}
