@@ -389,6 +389,11 @@ function eventHandler() {
 			nextEl: '.sEntertainment__arrows .swiper-button-next',
 			prevEl: '.sEntertainment__arrows .swiper-button-prev'
 		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sEntertainment .swiper-pagination"
+		},
 		breakpoints: {
 			// when window width is >= 768px
 			768: {
@@ -403,6 +408,11 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.sHowItWas__arrows .swiper-button-next',
 			prevEl: '.sHowItWas__arrows .swiper-button-prev'
+		},
+		pagination: {
+			type: 'bullets',
+			clickable: true,
+			el: ".sHowItWas .swiper-pagination"
 		},
 		breakpoints: {
 			// when window width is >= 768px

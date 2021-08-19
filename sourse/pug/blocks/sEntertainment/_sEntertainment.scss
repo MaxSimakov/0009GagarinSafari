@@ -102,7 +102,7 @@
 	&__arrows {
 		display: flex;
 		justify-content: center;
-		padding-top: 40px;
+		padding-top: 16px;
 		@include media-breakpoint-up(md) {
 			display: none;
 		}
@@ -112,6 +112,9 @@
 			right: 0;
 			left: 0;
 		}
+	}
+	.swiper-pagination {
+		padding-top: 10px;
 	}
 
 	.row {

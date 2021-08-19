@@ -30,7 +30,7 @@
 	&__arrows {
 		display: flex;
 		justify-content: center;
-		padding-top: 60px;
+		padding-top: rem(25);
 		@include media-breakpoint-up(lg) {
 			padding-top: 0;
 		}
@@ -44,6 +44,11 @@
 				margin: 0 6px;
 				right: 0;
 				left: 0;
+			}
+			@include media-breakpoint-up(lg) {
+				margin: 0;
+				top: auto;
+				bottom: 50%;
 			}
 		}
 	}
@@ -71,7 +76,11 @@
 	}
 	.swiper-pagination {
 		line-height: 1;
-		padding-top: rem(55);
+		padding-top: rem(20);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(55);
+		}
+
 	}
 	@include media-breakpoint-up(xl) {
 	}

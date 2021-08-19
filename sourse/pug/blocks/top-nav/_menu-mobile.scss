@@ -1,9 +1,8 @@
-
 $h: rem(2);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
+	height: $h * 12;
 	position: relative;
 	color: $primary;
 	// font-size: 34px;
@@ -13,26 +12,23 @@ $h: rem(2);
 	@extend .btn-primary;
 	width: rem(60);
 	height: rem(60);
-		@include media-breakpoint-up(xl) {
-
-			margin-left: rem(66);
-			&__title{
-				position: absolute;
-				right: calc(100% + #{rem(18)} );
-				color: #1E2831;
-			}
-			&::before{
-			 
-			 content: '';
-			 position: absolute;
-			 top: 0;
-			 height: 100%;
-			 width: rem(76);
-				right: 80%;
-		 
-			}
+	@include media-breakpoint-up(xl) {
+		margin-left: rem(66);
+		&__title {
+			position: absolute;
+			right: calc(100% + #{rem(18)});
+			color: #1e2831;
 		}
-		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: rem(76);
+			right: 80%;
+		}
+	}
+
 	span:after,
 	span:before {
 		content: "";
@@ -45,8 +41,6 @@ $h: rem(2);
 	}
 
 	span:before {
-
-
 		top: $h * 3;
 	}
 
@@ -54,7 +48,7 @@ $h: rem(2);
 		bottom: $h * 3;
 	}
 
-	span { 
+	span {
 		display: block;
 	}
 
@@ -81,18 +75,16 @@ $h: rem(2);
 
 	&.on span:after,
 	&.on span:before {
-
 		top: 0;
 		bottom: 0;
-		
 	}
 
 	&.on span:before {
-		transform: rotate3d(0,0,1, 45deg);
+		transform: rotate3d(0, 0, 1, 45deg);
 	}
 
 	&.on span:after {
-		transform: rotate3d(0,0,1, -45deg);
+		transform: rotate3d(0, 0, 1, -45deg);
 	}
 }
 
@@ -106,12 +98,11 @@ $h: rem(2);
 	// left: 0;
 	right: 0;
 	background-color: #fff;
-	&:not(.active){
-		transform: translate3d(120%, 0,0);
+	&:not(.active) {
+		transform: translate3d(120%, 0, 0);
 		--opacity: 0;
-
 	}
-	@include mt(.6s);
+	@include mt(0.6s);
 	will-change: transform;
 
 	&__inner {
@@ -121,12 +112,12 @@ $h: rem(2);
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
-		@include mt(.3s);
-		transition-delay: .4s;
+		@include mt(0.3s);
+		transition-delay: 0.4s;
 		opacity: var(--opacity);
 	}
 
-	&.active { 
+	&.active {
 		.toggle-menu-mobile {
 			opacity: 1;
 		}
@@ -142,7 +133,8 @@ $h: rem(2);
 		left: auto;
 		top: rem(30);
 		right: rem(30);
-		color: #C4C4C4 !important;
+		color: #c4c4c4 !important;
+		background-color: transparent !important;
 		width: auto;
 		height: auto;
 		border: none !important;
@@ -153,7 +145,7 @@ $h: rem(2);
 		span,
 		span:after,
 		span:before {
-			background-color: #C4C4C4;
+			background-color: #c4c4c4;
 		}
 
 		&.on {
@@ -163,10 +155,10 @@ $h: rem(2);
 				background-color: transparent;
 			}
 		}
-	} 
-	&__head{
-		border-bottom: 1px solid #D9DEE2;
-		a{
+	}
+	&__head {
+		border-bottom: 1px solid #d9dee2;
+		a {
 			display: block;
 			padding: rem(20) rem(60);
 		}

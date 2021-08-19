@@ -8,7 +8,7 @@ mixin sEntertainment(data)
 				.swiper-wrapper
 					mixin slide(i, t)
 						+e.slide.swiper-slide
-							+e.item.bg-wrap(href=`#`)
+							+e.item.bg-wrap
 								+pic(`entertainment-${i}.jpg`, 'bg', 0).picture-bg
 								h5!= t
 					+slide(1, `Дайвинг`)
@@ -21,6 +21,7 @@ mixin sEntertainment(data)
 					+slide(8, `SUP-серфинг`)
 					+slide(9, `Игры (мафия, <br> настолки)`)
 					+slide(10, `Крутые <br> вечеринки`)
+			.swiper-pagination.d-md-none
 			+e.arrows
 				+arrow
 			+e.bg.d-none.d-xl-block
