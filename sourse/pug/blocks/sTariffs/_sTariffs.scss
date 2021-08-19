@@ -3,9 +3,31 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	position: relative;
 	.row{
 		@include media-breakpoint-down(lg){
 			--bs-gutter-y: 20px;
+		}
+	}
+	&__background{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -4;
+		max-width: rem(1190);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(270deg, rgba(245, 247, 247, 0) 0%, #F5F7F7 100%), linear-gradient(180deg, #F5F7F7 0%, rgba(245, 247, 247, 0) 41.15%), linear-gradient(0deg, rgba(245, 247, 247, 0.85), rgba(245, 247, 247, 0.85));
+		}
+		img{
+			transform: matrix(-1, 0, 0, 1, 0, 0);
+			height: rem(892);
 		}
 	}
 	background-color: $light;

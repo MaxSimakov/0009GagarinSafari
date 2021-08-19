@@ -11,7 +11,7 @@
 	}
 	.img1{
 		@include media-breakpoint-down(lg){
-			order:1;
+			order:0;
 		}
 	}
 	.img2{
@@ -19,7 +19,7 @@
 			padding-left: 0;
 		}
 		@include media-breakpoint-down(lg){
-			order:3;
+			order:2;
 		}
 	}
 	.row{
@@ -35,7 +35,7 @@
 		letter-spacing: 0.1em;
 		text-align: center;
 		@include media-breakpoint-up(xl){
-			padding-top: 60px;
+			padding-top: 18px;
 			text-align: left;
 		}
 	}
@@ -46,6 +46,9 @@
 		
 	}
 	ul{
+		@include media-breakpoint-down(sm){
+			padding-left: 30px;
+		}
 		li{
 			padding-bottom: rem(8);
 			@include media-breakpoint-up(lg){
@@ -67,13 +70,19 @@
 		}
 	}
 	.caption--1{
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
 		@include media-breakpoint-down(lg){
-			order:0;
+			order:1;
 		}
 	}
 	.caption--2{
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
 		@include media-breakpoint-down(lg){
-			order:2;
+			order:3;
 		}
 	}
 	&__bg1{
@@ -81,6 +90,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: -1;
+		max-width: rem(1190);
 		&::after{
 			content: '';
 			position: absolute;
@@ -90,16 +100,13 @@
 			height: 100%;
 			background-image: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 76.04%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
 		}
-		img{
-			position: relative;
-			max-width: rem(1190);
-		}
 	}
 	&__bg2{
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: -1;
+		max-width: rem(1190);
 		&::after{
 			content: '';
 			position: absolute;
@@ -108,10 +115,6 @@
 			width: 100%;
 			height: 100%;
 			background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 14.06%, #FFFFFF 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
-		}
-		img{
-			position: relative;
-			max-width: rem(1190);
 		}
 	}
 	@include media-breakpoint-up(xl) {}

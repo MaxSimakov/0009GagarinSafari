@@ -52,7 +52,9 @@
 				width: 100%;
 			}
 			input{
-				text-align: center;
+				&::placeholder {
+					text-align: center;
+				}
 				border: 1px solid #D6E0EA;
 			}
 			.name{

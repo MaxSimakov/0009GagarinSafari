@@ -1,6 +1,6 @@
 mixin sTariffs(data)
 	// start sTariffs
-	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
+	+b.SECTION.sTariffs.section.bg-wrap#sTariffs&attributes(attributes)
 		.container
 			+b.section-title.text-center
 				h2 Тарифы
@@ -20,7 +20,7 @@ mixin sTariffs(data)
 							li Вейкборд/SUP/йога
 							li Спортивная страховка
 						+e.btn-wrap
-							+e.btn.btn.btn-danger Оставить заявку
+							+e.btn.btn.btn-danger.link-modal-js(href="#modal-call") Оставить заявку
 				.col-12.col-lg-6
 					+e.desc
 						+e.H3.title С обучением
@@ -38,5 +38,7 @@ mixin sTariffs(data)
 							li Вейкборд/SUP/йога
 							li Спортивная страховка
 						+e.btn-wrap
-							+e.btn.btn.btn-danger Оставить заявку
+							+e.btn.btn.btn-danger.link-modal-js(href="#modal-call") Оставить заявку
+		+e.background.d-none.d-xl-block
+			+pic('tariffs-bg.jpg')
 	// end sTariffs

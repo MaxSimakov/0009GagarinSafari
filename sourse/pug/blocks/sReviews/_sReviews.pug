@@ -1,7 +1,8 @@
 mixin sReviews(data)
 	// start sReviews
-	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
-		+e.IMG.bg(src="img/reviews-bg.jpg")
+	+b.SECTION.sReviews.section.bg-wrap#sReviews&attributes(attributes)
+		+pic('reviews-bg.jpg','bg').picture-bg.pic-rew
+		//+e.IMG.bg(src="img/reviews-bg.jpg")
 		.container
 			+b.section-title.text-center
 				h2 Отзывы

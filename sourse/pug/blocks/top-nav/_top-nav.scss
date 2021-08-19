@@ -21,6 +21,7 @@
 	}
 	.row{
 		align-items: center;
+		--bs-gutter-x:1.6666665rem;
 	}
 	.sContact__btn{
 		width: rem(30) !important;
@@ -46,10 +47,11 @@
 		font-size: rem(24);
 		font-weight: bold;
 		line-height: 1;
-		&:not(:hover){
-			color: #1E2831;
+		// &:not(:hover){
+		// 	color: #1E2831;
 
-		}
+		// }
+		color:$body-color !important;
 	}
 
 	&__tel-icon{
