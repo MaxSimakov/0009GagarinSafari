@@ -11,8 +11,8 @@ $h: rem(2);
 	@extend .btn;
 	@extend .btn-primary;
 	padding: 0;
-	width: 60px;
-	height: 60px;
+	width: var(--btn-height);
+	height: var(--btn-height);
 	@include media-breakpoint-up(xl) {
 		margin-left: rem(66);
 		&__title {
@@ -59,13 +59,16 @@ $h: rem(2);
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 20px;
 		height: 2px;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
 		transform-origin: 50% 50%;
+	width: 18px;
+		@include media-breakpoint-up(xxl) {
+			width: 20px;
+		}
 	}
 
 	// &.on {

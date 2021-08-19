@@ -51,8 +51,13 @@
 		--nav-sp-y: #{rem(10)};
 	}
 	--nav-sp-y: #{rem(8)};
-	--nav-h: calc(60px + var(--nav-sp-y) * 2);
+	--btn-height: 50px;
+	--nav-h: calc(var(--btn-height) + var(--nav-sp-y) * 2);
+	@include media-breakpoint-up(xxl) {
+		--btn-height: 60px;
+	}
 }
+
 
 @include media-breakpoint-up(xl) {
 }

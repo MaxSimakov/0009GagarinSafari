@@ -82,11 +82,11 @@
 			padding-bottom: 30px;
 		}
 		@include media-breakpoint-up(lg){
-			max-width: rem(430);
+			max-width: rem(350);
 			text-align: left;
 		}
 		@include media-breakpoint-down(md){
-			max-width: 310px;
+			max-width: 250px;
 		}
 	}
 	&__caption{

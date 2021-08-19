@@ -1,6 +1,7 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	//
+
 	@include media-breakpoint-up(xl) {
 		padding-top: var(--nav-sp-y);
 		padding-bottom: var(--nav-sp-y);
@@ -15,16 +16,14 @@
 	z-index: 200;
 	border-bottom: 1px solid $light;
 	img {
-		width: 145px;
-		@include media-breakpoint-up(md) {
-		width: 155px;
-		}
+		height: var(--btn-height);
+		width: auto;
 	}
 	.row {
 		align-items: center;
 		--bs-gutter-x: #{rem(12)};
 		@include media-breakpoint-up(sm) {
-		--bs-gutter-x: 1.6666665rem;
+			--bs-gutter-x: 1.6666665rem;
 		}
 	}
 	.sContact__btn {
@@ -56,20 +55,32 @@
 
 		// }
 		color: $body-color !important;
+		& + div {
+			@include media-breakpoint-down(xxl) {
+				line-height: 1;
+			}
+		}
 	}
 
 	&__tel-icon {
-		width: 60px;
-		height: 60px;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: #fff;
 		background: #ff1b34;
+		width: 50px;
+		height: 50px;
+		@include media-breakpoint-up(xxl) {
+			width: 60px;
+			height: 60px;
+		}
 		.icon {
 			color: #fff;
-			font-size: 24px;
+			font-size: 20px;
+			@include media-breakpoint-up(xxl) {
+				font-size: 24px;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {
