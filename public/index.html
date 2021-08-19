@@ -175,7 +175,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="sDescription__background d-none d-xl-block"><img src="img/description-bg.png"/>
+					<div class="sDescription__background d-none d-xl-block">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/description-bg.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/description-bg.webp"/>
+							<source type="image/jpg" srcset="img/@2x/description-bg.jpg" media="(min-width:576px)"/>
+							<source type="image/jpg" srcset="img/@1x/description-bg.jpg"/><img src="img/@2x/description-bg.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
 				</div>
 			</section>
@@ -262,15 +270,39 @@
 						</div>
 						<div class="col-12 col-lg-6 img2"><img src="img/training-2.png"/></div>
 					</div>
-					<div class="sTraining__bg1 d-none d-xl-block"><img src="img/training-bg-1.png"/>
+					<div class="sTraining__bg1 d-none d-xl-block">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/training-bg-1.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/training-bg-1.webp"/>
+							<source type="image/jpg" srcset="img/@2x/training-bg-1.jpg" media="(min-width:576px)"/>
+							<source type="image/jpg" srcset="img/@1x/training-bg-1.jpg"/><img src="img/@2x/training-bg-1.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
-					<div class="sTraining__bg2 d-none d-xl-block"><img src="img/training-bg-2.png"/>
+					<div class="sTraining__bg2 d-none d-xl-block">
+						<!-- picture-->
+						<picture> 
+							<source type="image/webp" srcset="img/@2x/webp/training-bg-2.webp" media="(min-width:576px)"/>
+							<source type="image/webp" srcset="img/@1x/webp/training-bg-2.webp"/>
+							<source type="image/jpg" srcset="img/@2x/training-bg-2.jpg" media="(min-width:576px)"/>
+							<source type="image/jpg" srcset="img/@1x/training-bg-2.jpg"/><img src="img/@2x/training-bg-2.jpg" alt="" loading="lazy"/>
+						</picture>
+						<!-- /picture-->
 					</div>
 				</div>
 			</section>
 			<!-- end sTraining-->
 			<!-- start sInsructors-->
-			<section class="sInsructors section" id="sInsructors"><img class="sInsructors__bg" src="img/instructors-bg.png" alt="" role="presentation"/>
+			<section class="sInsructors section bg-wrap" id="sInsructors">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/webp" srcset="img/@2x/webp/instructors-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/instructors-bg.webp"/>
+					<source type="image/jpg" srcset="img/@2x/instructors-bg.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/instructors-bg.jpg"/><img class="object-fit-js" src="img/@2x/instructors-bg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
 					<h2>Наши инструкторы</h2>
 					<div class="row">
@@ -513,7 +545,7 @@
 			</section>
 			<!-- end sEntertainment-->
 			<!-- start sTariffs-->
-			<section class="sTariffs section" id="sTariffs">
+			<section class="sTariffs section bg-wrap" id="sTariffs">
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Тарифы</h2>
@@ -538,8 +570,8 @@
 									<li>Спортивная страховка</li>
 								</ul>
 								<div class="sTariffs__btn-wrap">
-									<div class="sTariffs__btn btn btn-danger">Оставить заявку
-									</div>
+									<a class="sTariffs__btn btn btn-danger link-modal-js" href="#modal-call">Оставить заявку
+									</a>
 								</div>
 							</div>
 						</div>
@@ -564,12 +596,22 @@
 									<li>Спортивная страховка</li>
 								</ul>
 								<div class="sTariffs__btn-wrap">
-									<div class="sTariffs__btn btn btn-danger">Оставить заявку
-									</div>
+									<a class="sTariffs__btn btn btn-danger link-modal-js" href="#modal-call">Оставить заявку
+									</a>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="sTariffs__background d-none d-xl-block">
+					<!-- picture-->
+					<picture> 
+						<source type="image/webp" srcset="img/@2x/webp/tariffs-bg.webp" media="(min-width:576px)"/>
+						<source type="image/webp" srcset="img/@1x/webp/tariffs-bg.webp"/>
+						<source type="image/jpg" srcset="img/@2x/tariffs-bg.jpg" media="(min-width:576px)"/>
+						<source type="image/jpg" srcset="img/@1x/tariffs-bg.jpg"/><img src="img/@2x/tariffs-bg.jpg" alt="" loading="lazy"/>
+					</picture>
+					<!-- /picture-->
 				</div>
 			</section>
 			<!-- end sTariffs-->
@@ -646,7 +688,16 @@
 			</section>
 			<!-- end sHowItWas-->
 			<!-- start sReviews-->
-			<section class="sReviews section" id="sReviews"><img class="sReviews__bg" src="img/reviews-bg.jpg" alt="" role="presentation"/>
+			<section class="sReviews section bg-wrap" id="sReviews">
+				<!-- picture-->
+				<picture class="picture-bg pic-rew"> 
+					<source type="image/webp" srcset="img/@2x/webp/reviews-bg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/reviews-bg.webp"/>
+					<source type="image/jpg" srcset="img/@2x/reviews-bg.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/reviews-bg.jpg"/><img class="object-fit-js" src="img/@2x/reviews-bg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
+				<!--+e.IMG.bg(src="img/reviews-bg.jpg")-->
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Отзывы</h2>

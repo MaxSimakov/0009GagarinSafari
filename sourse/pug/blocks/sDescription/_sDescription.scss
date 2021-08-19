@@ -43,6 +43,9 @@
 				max-width: rem(413);
 				text-align: left;
 			}
+			@include media-breakpoint-between(lg,xxl){
+				font-size: 56px;
+			}
 			text-align: center;
 			padding-bottom: rem(35);
 		}

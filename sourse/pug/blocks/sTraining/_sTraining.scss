@@ -81,6 +81,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: -1;
+		max-width: rem(1190);
 		&::after{
 			content: '';
 			position: absolute;
@@ -90,16 +91,13 @@
 			height: 100%;
 			background-image: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 76.04%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
 		}
-		img{
-			position: relative;
-			max-width: rem(1190);
-		}
 	}
 	&__bg2{
 		position: absolute;
 		top: 0;
 		right: 0;
 		z-index: -1;
+		max-width: rem(1190);
 		&::after{
 			content: '';
 			position: absolute;
@@ -108,10 +106,6 @@
 			width: 100%;
 			height: 100%;
 			background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 14.06%, #FFFFFF 100%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
-		}
-		img{
-			position: relative;
-			max-width: rem(1190);
 		}
 	}
 	@include media-breakpoint-up(xl) {}
