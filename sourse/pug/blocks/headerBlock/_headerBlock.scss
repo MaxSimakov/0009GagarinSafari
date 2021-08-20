@@ -183,6 +183,9 @@
 	.menu{
 		position: absolute;
 		@include a-cent1(y);
+		@include media-breakpoint-down(xxl) {
+			margin-top: rem(50);
+		}
 		right: 0;
 		padding: 0;
 		text-align: right;
