@@ -6,11 +6,17 @@ mixin modal()
 		+form-wrap
 			.h4 Заказать звонок
 			+e.caption Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
-			+input("Ваше имя",'text')
+			+input("Ваше имя",'text','', 'name')
 			+input("Ваш телефон",'tel')
 			+e.btn(type="submit") Забронировать место
 			+e.agreement Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
 	// #modal-call
+	
+	+b.modal-win--call(id="modal-thanks" class=" " style="display: none" )
+		+b.form-wrap
+			.h4 Спасибо за заявку
+			+e.caption Мы скоро с вами свяжемся
+	// #modal-thanks
 	+b.modal-win--instructor(id="modal-instructor-1" class=" " style="display: none" )
 		.row
 			.col-12.col-lg-6

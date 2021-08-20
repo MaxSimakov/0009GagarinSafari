@@ -114,7 +114,7 @@
 
 	.container{
 	@include media-breakpoint-up(xl) {
-			max-width: calc(980px );
+			// max-width: calc(980px );
 		}
 		flex-grow: 1;
 		display: flex;
@@ -177,8 +177,55 @@
 
 	}
 
-	
+	.container{
+		position: relative;
+	}
+	.menu{
+		position: absolute;
+		@include a-cent1(y);
+		right: 0;
+		padding: 0;
+		text-align: right;
+		list-style: none;
 
+		a{
+			color: #fff !important;
+			font-size: 1rem;
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+			&:hover{
+				--color: currentColor;
+				--op:1;
+			}
+		}
+	}
+	&__circle{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid var(--color, transparent);
+		&::before{
+			content: '';
+			@include a-cent;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: currentColor;
+		}
+	}
+	&__text{
+		opacity: 0.5;
+		position: absolute;
+		right: 100%;
+		padding-right: 10px;
+		@include mt;
+		opacity: var(--op, 0);
+		visibility: var(--op, hidden);
+		// visibility: hidden;
+		white-space: nowrap;
+	}
 	@include media-breakpoint-only(xl) {
 		h1{
 			font-size: calc(1.6875rem + 3vw);

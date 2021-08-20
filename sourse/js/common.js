@@ -75,7 +75,7 @@ const JSCCommon = {
 					}
 				}
 				setValue(data.title, '.h4'); 
-				// setValue(data.order, '.order'); 
+				setValue(data.order, '.order'); 
 				setValue(data.btn, '.form-wrap__btn'); 
 			})
 	},
@@ -205,7 +205,7 @@ const JSCCommon = {
 			}
 			else {
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - 80 }, 1000);
 				return false;
 			}
 		});
@@ -214,6 +214,47 @@ const JSCCommon = {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
 		if (currentYear) currentYear.innerText = now.getFullYear();
+	},
+	sendForm() {
+		var gets = (function () {
+			var a = window.location.search;
+			var b = new Object();
+			var c;
+			a = a.substring(1).split("&");
+			for (var i = 0; i < a.length; i++) {
+				c = a[i].split("=");
+				b[c[0]] = c[1];
+			}
+			return b;
+		})();
+		// form
+		$(document).on('submit', "form", function (e) {
+			e.preventDefault();
+			const th = $(this);
+			var data = th.serialize();
+			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
+			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
+			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
+			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
+			$.ajax({
+				url: 'action.php',
+				type: 'POST',
+				data: data,
+			}).done(function (data) {
+
+				Fancybox.close();
+				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
+				// window.location.replace("/thanks.html");
+				setTimeout(function () {
+					// Done Functions
+					th.trigger("reset");
+					// $.magnificPopup.close();
+					// ym(53383120, 'reachGoal', 'zakaz');
+					// yaCounter55828534.reachGoal('zakaz');
+				}, 4000);
+			}).fail(function () { });
+
+		});
 	},
 	toggleShow(toggle, drop) {
 
@@ -240,14 +281,15 @@ const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
+	JSCCommon.getCurrentYear('year');
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	// JSCCommon.sendForm();
+	JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
