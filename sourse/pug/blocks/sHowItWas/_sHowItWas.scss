@@ -42,8 +42,12 @@
 	&__item {
 		@include block;
 		height: 100%;
+<<<<<<< HEAD
 		position: relative;
 		overflow: hidden;
+=======
+		background-color: $body-color;
+>>>>>>> 1d5503ec8f3a46e2e3b46f80d5771fedecbce331
 		// picture {
 		// 	&::after {
 		// 		content: "";
